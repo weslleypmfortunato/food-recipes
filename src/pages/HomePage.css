@@ -1,0 +1,21 @@
+.HomePage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.title-carousel {
+  display: grid;
+  place-items: center;
+  gap: 16px;
+}
+
+h1 {
+  color: #FF0403;
+}
+
+.Cards {
+  display: flex;
+  gap: 16px;
+}
