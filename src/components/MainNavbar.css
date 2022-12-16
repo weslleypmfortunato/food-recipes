@@ -3,3 +3,7 @@
   height: 65px;
   border-radius: 5px;
 }
+
+.active, .dot:hover {
+  background-color: white;
+}

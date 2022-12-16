@@ -1,8 +1,5 @@
-.carousel-item {
-  display: flex;
-  justify-content: center;
-}
 
-.d-block {
-  border-radius: 10px;
+
+.active, .dot:hover {
+  background-color: white;
 }
