@@ -20,37 +20,37 @@ const SecondNavbar = () => {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
-              <Link className="nav-link active" aria-current="page">Cookies</Link>
+              <Link className="nav-link active" aria-current="page" style={{backgroundColor: "white"}}>Cookies</Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link active" aria-current="page">Chicken</Link>
+              <Link className="nav-link active" aria-current="page" style={{backgroundColor: "white"}}>Chicken</Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link active" aria-current="page">Beef</Link>
+              <Link className="nav-link active" aria-current="page" style={{backgroundColor: "white"}}>Beef</Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link active" aria-current="page">Health Food</Link>
+              <Link className="nav-link active" aria-current="page" style={{backgroundColor: "white"}}>Health Food</Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link active" aria-current="page">Finger Food</Link>
+              <Link className="nav-link active" aria-current="page" style={{backgroundColor: "white"}}>Finger Food</Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link active" aria-current="page">Drinks</Link>
+              <Link className="nav-link active" aria-current="page" style={{backgroundColor: "white"}}>Drinks</Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link active" aria-current="page">Salads</Link>
+              <Link className="nav-link active" aria-current="page" style={{backgroundColor: "white"}}>Salads</Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link active" aria-current="page">Pasta</Link>
+              <Link className="nav-link active" aria-current="page" style={{backgroundColor: "white"}}>Pasta</Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link active" aria-current="page">Fish & Sea</Link>
+              <Link className="nav-link active" aria-current="page" style={{backgroundColor: "white"}}>Fish & Sea</Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link active" aria-current="page">Soup</Link>
+              <Link className="nav-link active" aria-current="page" style={{backgroundColor: "white"}}>Soup</Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link active" aria-current="page">All Recipes</Link>
+              <Link className="nav-link active" aria-current="page" style={{backgroundColor: "white"}}>All Recipes</Link>
             </li>
           </ul>
         </div>

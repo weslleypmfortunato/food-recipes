@@ -9,10 +9,10 @@ const MainNavbar = () => {
 
   return ( 
     <nav className="navbar navbar-expand-lg" style={{backgroundColor: "#FF0403"}}>
-      <div className="container-fluid">
+      <div className="container-fluid MainNavibar">
         <Link to={'/'} className="navbar-brand"><img src={ logo } alt="Logo" className="logo"/></Link>
         <button 
-          class="navbar-toggler" 
+          className="navbar-toggler" 
           type="button" 
           data-bs-toggle="collapse" 
           data-bs-target="#navbarSupportedContent" 
@@ -20,21 +20,21 @@ const MainNavbar = () => {
           aria-expanded="false" 
           aria-label="Toggle navigation"
           style={{minWidth: "180px"}}>
-          <span class="navbar-toggler-icon"></span>
+          <span className="navbar-toggler-icon"></span>
         </button>
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+          <ul className="navbar-nav me-auto mb-2 mb-lg-0" style={{backgroundColor: "black"}}>
             <li className="nav-item">
-              <Link className="nav-link active" aria-current="page" style={{color: "white"}}>SEND A RECIPE</Link>
+              <Link className="nav-link active" aria-current="page" style={{color: "white", backgroundColor: "#FF0403"}}>SEND A RECIPE</Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link active" aria-current="page" style={{color: "white"}}>REGISTER</Link>
+              <Link className="nav-link active" aria-current="page" style={{color: "white", backgroundColor: "#FF0403"}}>REGISTER</Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link active" aria-current="page" style={{color: "white"}}>LOG IN</Link>
+              <Link className="nav-link active" aria-current="page" style={{color: "white", backgroundColor: "#FF0403"}}>LOG IN</Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link active" aria-current="page" style={{color: "white"}}>ABOUT US</Link>
+              <Link className="nav-link active" aria-current="page" style={{color: "white", backgroundColor: "#FF0403"}}>ABOUT US</Link>
             </li>
           </ul>
           <form onSubmit={handleSubmit} className="d-flex" role="search">
