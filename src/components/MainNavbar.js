@@ -8,7 +8,7 @@ const MainNavbar = () => {
   }
 
   return ( 
-    <nav className="navbar navbar-expand-lg" style={{backgroundColor: "#FF0403"}}>
+    <nav className="navbar navbar-expand-lg" style={{backgroundColor: "#FF0403", width: "100vw"}}>
       <div className="container-fluid MainNavibar">
         <Link to={'/'} className="navbar-brand"><img src={ logo } alt="Logo" className="logo"/></Link>
         <button 
@@ -22,7 +22,7 @@ const MainNavbar = () => {
           style={{minWidth: "180px"}}>
           <span className="navbar-toggler-icon"></span>
         </button>
-        <div className="collapse navbar-collapse" id="navbarSupportedContent">
+        <div className="collapse navbar-collapse testando" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0" style={{backgroundColor: "black"}}>
             <li className="nav-item">
               <Link className="nav-link active" aria-current="page" style={{color: "white", backgroundColor: "#FF0403"}}>SEND A RECIPE</Link>

@@ -13,7 +13,7 @@ const Carousell = () => {
       },
       {
         image: "https://img.taste.com.au/oEH4ChBq/taste/2016/11/vietnamese-lemongrass-beef-noodle-salad-62981-1.jpeg",
-        caption: "Viatnamese Beef Noodle"
+        caption: "Vietnamese Beef Noodle"
       },
     ];
   

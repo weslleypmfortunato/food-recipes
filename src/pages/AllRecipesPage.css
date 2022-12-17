@@ -1,0 +1,28 @@
+.recipes {
+  display: grid;
+  place-items: center;
+  border: 0.5px solid lightgray;
+  border-radius: 5px;
+  margin-bottom: 8px;
+  max-width: 250px ;
+}
+
+h5 {
+  text-align: center;
+  max-width: 230px;
+}
+
+.all-recipes-img {
+  max-width: 200px;
+  max-height: 200px;
+  border-radius: 5px;
+  border: 0.5px solid lightgray;
+}
+
+.servings-nomargin {
+  margin-bottom: -1px;
+}
+
+.servings-preparation {
+  font-size: 0.75rem;
+}
