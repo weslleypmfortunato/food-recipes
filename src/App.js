@@ -6,7 +6,7 @@ import RecipeDetailsPage from './pages/RecipeDetailsPage';
 
 function App() {
   return (
-    <div className="container">
+    <div className="app">
       <Routes>
         <Route path='/' element={ <HomePage/> }/>
         <Route path='/recipes' element={ <AllRecipesPage /> }/>
