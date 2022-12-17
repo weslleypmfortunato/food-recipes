@@ -1,3 +1,4 @@
+import './RecipeDetailsPage.css'
 import MainNavbar from "../components/MainNavbar";
 import SecondNavbar from "../components/SecondNavbar";
 import axios from 'axios'
@@ -21,20 +22,50 @@ const RecipeDetailsPage = () => {
     <div className="RecipeDetailsPage">
       <MainNavbar />
       <SecondNavbar />
-      <div>
+      <div className='detailed-recipe'>
         {
           recipe && <>
-            <div>
-              <img src={ recipe.imageUrl } alt="Recipe Detail" />
-            </div>
-            <div>
+            <div className='title-img'>
               <h3>{ recipe.name }</h3>
+              <img src={ recipe.imageUrl } alt="Recipe Detail" className='detailed-img'/>
+            </div>
+            <div className='detailed-info'>
               <p><b>Preparation Time:</b> { recipe.prepationTime }</p>
               <p><b>Servings:</b> { recipe.servings }</p>
               <p><b>Prepared by:</b> { recipe.owner }</p>
-              <p><b>Ingredients:</b> { `${recipe.ingredients.quantity} ${recipe.ingredients.ingredient}`}</p>
-              <p><b>Steps: </b>{ `${recipe.steps.stepNum} ${recipe.steps.toDo}`}</p>
-              <p><b>Nutrition:</b> { `${recipe.nutrition.nutritionQty} ${recipe.nutrition.nutritionUnit}`}</p>
+
+              <h5 style={{margin: "20px"}}>Ingredients:</h5>
+              {
+                recipe.ingredients.map(condiment => {
+                  return (
+                    <div>
+                      <p><span>{ condiment.quantity }</span> - { condiment.ingredient }</p>
+                    </div>
+                  )
+                })
+              }
+
+              <h5 style={{margin: "20px"}}>Steps:</h5>
+              {
+                recipe.steps.map(stepByStep => {
+                  return (
+                    <div>
+                      <p><span>{ stepByStep.stepNum} </span>- { stepByStep.toDo }</p>
+                    </div>
+                  )
+                })
+              }
+              
+              <h5 style={{margin: "20px"}}>Nutrition Facts:</h5>
+              {
+                recipe.nutrition.map(nutritionInfo => {
+                  return (
+                    <div>
+                      <p><span>{ nutritionInfo.nutritionQty } </span>- { nutritionInfo.nutritionUnit } </p>
+                    </div>
+                  )
+                })
+              }
             </div>
           </>
         }

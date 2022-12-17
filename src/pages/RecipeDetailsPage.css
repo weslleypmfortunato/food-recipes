@@ -1,0 +1,36 @@
+.RecipeDetailsPage {
+  display: grid;
+  place-items: center;
+}
+
+.detailed-img {
+  max-width: 700px;
+  border-radius: 5px;
+}
+
+.title-img {
+  display: grid;
+  place-items: center;
+}
+
+.detailed-info {
+  position: absolute;
+  display: grid;
+  place-items: left;
+  
+}
+
+.detailed-info p {
+  margin: 0 0 3px 5px;
+}
+
+h5 {
+  text-align: left;
+  margin: 10px;
+}
+
+p > span {
+  color: red;
+  font-weight: 700;
+}
+
