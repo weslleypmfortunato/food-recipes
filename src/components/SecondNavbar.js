@@ -29,6 +29,9 @@ const SecondNavbar = () => {
               <Link className="nav-link active" aria-current="page" style={{backgroundColor: "white"}}>Beef</Link>
             </li>
             <li className="nav-item">
+              <Link className="nav-link active" aria-current="page" style={{backgroundColor: "white"}}>Pork</Link>
+            </li>
+            <li className="nav-item">
               <Link className="nav-link active" aria-current="page" style={{backgroundColor: "white"}}>Health Food</Link>
             </li>
             <li className="nav-item">
@@ -50,7 +53,7 @@ const SecondNavbar = () => {
               <Link className="nav-link active" aria-current="page" style={{backgroundColor: "white"}}>Soup</Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link active" aria-current="page" style={{backgroundColor: "white"}}>All Recipes</Link>
+              <Link to={'/recipes'} className="nav-link active" aria-current="page" style={{backgroundColor: "white"}}>All Recipes</Link>
             </li>
           </ul>
         </div>
