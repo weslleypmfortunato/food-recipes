@@ -50,18 +50,18 @@ const RecipeDetailsPage = () => {
                 recipe.steps.map(stepByStep => {
                   return (
                     <div>
-                      <p><span>{ stepByStep.stepNum} </span>- { stepByStep.toDo }</p>
+                      <p><span>{ stepByStep.stepNum}) </span> { stepByStep.toDo }</p>
                     </div>
                   )
                 })
               }
               
               <h5 style={{margin: "20px"}}>Nutrition Facts:</h5>
-              {
+              { 
                 recipe.nutrition.map(nutritionInfo => {
                   return (
                     <div>
-                      <p><span>{ nutritionInfo.nutritionQty } </span>- { nutritionInfo.nutritionUnit } </p>
+                      <p><span>{ nutritionInfo.nutritionQty } </span> { nutritionInfo.nutritionUnit } </p>
                     </div>
                   )
                 })

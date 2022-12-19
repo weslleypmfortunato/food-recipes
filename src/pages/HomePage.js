@@ -12,7 +12,6 @@ const HomePage = () => {
       <div className="HomePage">
         <div className="row">
           <div className="col title-carousel">
-            <h1>FLAVORS OF THE WORLD</h1>
             <Carousell />
             <div className="Cards">
               <Cards />

@@ -1,0 +1,44 @@
+.FakeSignupPage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.p-signup {
+  margin-top: 32px;
+  margin-bottom: -12px;
+  color: gray;
+  font-weight: 500;
+}
+
+.email input, .full-name input, .password-signup input, .username input {
+  width: 275px;
+  height: 30px;
+  margin-bottom: -32px;
+  border: 1px solid lightgray;
+  border-radius: 4px;
+  padding-left: 12px;
+  font-size: 14px;
+}
+
+.username-input {
+  margin-bottom: 16px;
+}
+
+.policy {
+  font-size: 12px;
+}
+
+.learn-more {
+  color: blue;
+  font-weight: 300;
+  display: flex;
+  justify-content: center;
+}
+
+
+
+
+
+
+

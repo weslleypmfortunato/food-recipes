@@ -17,7 +17,7 @@
   position: absolute;
   display: grid;
   place-items: left;
-  
+  max-width: 680px;
 }
 
 .detailed-info p {

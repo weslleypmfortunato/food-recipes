@@ -3,6 +3,10 @@ import { Routes, Route } from 'react-router-dom'
 import HomePage from './pages/HomePage';
 import AllRecipesPage from './pages/AllRecipesPage';
 import RecipeDetailsPage from './pages/RecipeDetailsPage';
+import NewRecipePage from './pages/NewRecipePage';
+import FakeLoginPage from './pages/FakeLoginPage';
+import FakeSignupPage from './pages/FakeSignupPage';
+
 
 function App() {
   return (
@@ -11,9 +15,14 @@ function App() {
         <Route path='/' element={ <HomePage/> }/>
         <Route path='/recipes' element={ <AllRecipesPage /> }/>
         <Route path='/recipes/:recipeId' element={ <RecipeDetailsPage />}/>
+        <Route path='/new-recipe' element={ <NewRecipePage /> }/>
+        <Route path='/login' element={ <FakeLoginPage /> }/>
+        <Route path='/signup' element={ <FakeSignupPage /> }/>
       </Routes>
     </div>
   );
 }
 
 export default App;
+
+
