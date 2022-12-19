@@ -14,7 +14,7 @@ const MainNavbar = () => {
           <Link to={'/'} ><img src={ logo } alt="Logo" className="logo"/></Link>
           <ul className="list">
             <li className="mainnavbar-links">
-              <Link to={'/login'} style={{color: "white", backgroundColor: "#FF0403"}}>SEND A RECIPE</Link>
+              <Link to={'/new-recipe'} style={{color: "white", backgroundColor: "#FF0403"}}>SEND A RECIPE</Link>
             </li>
             <li className="mainnavbar-links">
               <Link to={'/signup'} style={{color: "white", backgroundColor: "#FF0403"}}>SIGN UP</Link>
