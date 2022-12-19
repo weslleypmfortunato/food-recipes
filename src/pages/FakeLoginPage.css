@@ -1,0 +1,73 @@
+.FakeLoginPage {
+  display: grid;
+  place-items: center;
+}
+
+.login-form {
+  display: grid;
+  place-items: center;
+  gap: 16px;
+  margin-top: 32px;
+}
+
+fieldset {
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 5px;
+}
+
+.logo-login {
+  margin-top: 20px;
+  border-radius: 5px;
+}
+
+.login input {
+  width: 275px;
+  height: 30px;
+  margin-bottom: -32px;
+  border: 1px solid lightgray;
+  border-radius: 4px;
+  padding-left: 12px;
+  font-size: 14px;
+}
+
+.password input {
+  width: 275px;
+  height: 30px;
+  margin-bottom: 16px;
+  border: 1px solid lightgray;
+  border-radius: 4px;
+  padding-left: 12px;
+  font-size: 14px;
+}
+
+.btn-login {
+  height: 28px;
+  width: 275px;
+  margin-bottom: 16px;
+  border: 1px solid lightgray;
+  border-radius: 4px;
+  background-color: #0b5dd78a;
+  color: white;
+}
+
+.signup {
+  color: blue;
+}
+
+.no-account {
+  border: 1px solid lightgray;
+  margin-top: 16px;
+  padding: 16px;
+  width: 350px;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.app-store {
+  width: 250px;
+}
+
+

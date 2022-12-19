@@ -1,0 +1,76 @@
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-group-text {
+  width: 150px;
+}
+
+.form-control {
+  max-width: 600px;
+}
+
+.input-group-sm {
+  display: flex;
+  justify-content: center;
+  margin-top: 5px;
+}
+
+.new-recipe-btn {
+  width: 50px;
+  height: 30px;
+  margin-left: 8px;
+}
+
+.submit-btn {
+  margin-top: 30px;
+}
+
+.new-recipe-select {
+  font-size: 14px;
+  width: 600px;
+  border-radius: 4px;
+  color: gray;
+  border: 1px solid lightgray;
+  padding-left: 5px;
+}
+
+.double-line-label {
+  height: 60px;
+  margin-left: 16px;
+}
+
+.ingredients-steps-nutrition-input {
+  height: 30px;
+}
+
+.ingredients-steps-nutrition {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.ingredient-step-nutrition-group {
+  display: grid;
+  place-items: center;
+  font-size: 14px;
+}
+
+.ingredients-steps-nutrition-align {
+  display: flex;
+}
+
+.new-line p {
+  margin: 0;
+}
+
+input-color {
+  color: red;
+  font-weight: 700;
+}
+
+
+
+

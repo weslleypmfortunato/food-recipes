@@ -22,6 +22,7 @@ const AllRecipesPage = () => {
     <div className="AllRecipesPage">
       <MainNavbar />
       <SecondNavbar />
+      <h2>All recipes in one place</h2>
         <table className="table">
           <tbody>
             <tr className='single-recipe'>
@@ -30,7 +31,7 @@ const AllRecipesPage = () => {
                   return(
                     <td>
                       <div key={recipe._id} className='recipes'>
-                        <h5 style={{fontSize: "1rem", marginTop: "10px"}}><b>{ recipe.name }</b></h5>
+                        <h5 style={{fontSize: "1rem", marginTop: "10px", textAlign: "center"}}><b>{ recipe.name }</b></h5>
                         <Link to={`/recipes/${recipe._id}`}><img src={ recipe.imageUrl } alt="The dish ready" className='all-recipes-img'/></Link>
                         <div className="servings-preparation">
                           <p className='servings-nomargin'><b>Servings:</b> { recipe.servings }</p>

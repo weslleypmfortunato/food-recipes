@@ -1,6 +1,40 @@
 .logo {
-  width: 80px;
-  height: 65px;
-  border-radius: 5px;
+  width: 90px;
+  height: 90px;
+}
+
+.mainnavbar-items {
+  display: flex;
+  justify-content: space-between;
+}
+
+.mainnavbar-links a {
+  text-decoration: none;
+}
+
+.mainnavbar-links {
+  list-style: none;
+}
+
+.list {
+  width: 500px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.search-group {
+  display: flex;
+  align-items: center;
+}
+
+.search-bar {
+  height: 35px;
+}
+
+.search-btn {
+  height: 35px;
+  margin-right: 16px;
 }
 
