@@ -22,7 +22,7 @@ const AllRecipesPage = () => {
     <div className="AllRecipesPage">
       <MainNavbar />
       <SecondNavbar />
-      <h2>All recipes in one place</h2>
+      <h2 style={{color: "black"}}>All recipes in one place</h2>
         <table className="table">
           <tbody>
             <tr className='single-recipe'>

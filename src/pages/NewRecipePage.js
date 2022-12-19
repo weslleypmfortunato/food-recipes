@@ -70,7 +70,7 @@ const NewRecipePage = () => {
         setCategory('')
         setIngredients('')
   
-        navigate('/recipes')
+        navigate('/login')
       }).catch(err => console.log(err))
   }
 
@@ -79,7 +79,7 @@ const NewRecipePage = () => {
     <div className="NewRecipePage">
       <MainNavbar />
       <SecondNavbar />
-
+      <h2 style={{color: "black", marginTop: "32px", textAlign: "center"}}>Add a new recipe</h2>
       <form onSubmit={ handleSubmit } className='form'>
         <div className="input-group-sm flex-nowrap">
           <span className="input-group-text" id="addon-wrapping">Title: </span>
