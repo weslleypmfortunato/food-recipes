@@ -198,7 +198,10 @@ const NewRecipePage = () => {
               { ingredients.length > 0 &&
                 ingredients.map((item, index) => {
                   return (
-                    <p key={index}> <span className="input-color">{ item.quantity }</span> - { item.ingredient }</p>
+                    <div className="test">
+                      <p key={index} style={{maxWidth: "400px", marginTop: "5px"}}> <span className="input-color">{ item.quantity }</span> - { item.ingredient }</p>
+                      <p style={{maxWidth: "400px"}}>..............................................................................................................</p>
+                    </div>
                   )
                 })
               }
@@ -234,7 +237,10 @@ const NewRecipePage = () => {
               { steps.length > 0 &&
                 steps.map((stepItem, stepIndex) => {
                   return (
-                    <p key={stepIndex}> <span className="input-color">{ stepItem.stepNum })</span> { stepItem.toDo }</p>
+                    <div>
+                      <p key={stepIndex} style={{maxWidth: "400px", marginTop: "5px"}}> <span className="input-color">{ stepItem.stepNum })</span> { stepItem.toDo }</p>
+                      <p style={{maxWidth: "400px"}}>..............................................................................................................</p>
+                    </div>
                   )
                 })
               }
@@ -270,7 +276,10 @@ const NewRecipePage = () => {
               { nutrition.length > 0 &&
                 nutrition.map((nutritionItem, nutritionIndex) => {
                   return (
-                    <p key={nutritionIndex}> <span className="input-color">{ nutritionItem.nutritionQty }</span>  { nutritionItem.nutritionUnit }</p>
+                    <div>
+                      <p key={nutritionIndex} style={{maxWidth: "400px", marginTop: "5px"}}> <span className="input-color">{ nutritionItem.nutritionQty }</span>  { nutritionItem.nutritionUnit }</p>
+                      <p style={{maxWidth: "400px"}}>..............................................................................................................</p>
+                    </div>
                   )
                 })
               }
