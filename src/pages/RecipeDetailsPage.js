@@ -11,6 +11,7 @@ const apiURL = "https://ironrest.cyclic.app/fast-food-recipe-project-II"
 const RecipeDetailsPage = () => {
   const { recipeId } = useParams()
   const [recipe, setRecipe] = useState(null)
+  const [refresh, setRefresh] = useState('')
 
   useEffect(() => {
     axios.get(`${apiURL}/${recipeId}`)
@@ -18,6 +19,13 @@ const RecipeDetailsPage = () => {
         setRecipe(response.data)
       }).catch(err => console.log(err))
   }, [recipeId])
+
+  const deleteRecipe = recipeId => {
+    axios.delete(`${apiURL}/${recipeId}`)
+      .then(response => {
+        setRefresh(!refresh)
+      }).catch(err => console.log(err))
+  }
 
   return ( 
     <div className="RecipeDetailsPage_and_btn">
@@ -67,7 +75,18 @@ const RecipeDetailsPage = () => {
                   })
                 }
                 <Link to={`/edit/${recipeId}`}>
-                  <button type="button" className="btn btn-danger edit-btn">Edit Recipe</button>
+                  <button 
+                    type="button" 
+                    className="btn btn-danger edit-btn" 
+                    style={{width: "135px"}}>Edit Recipe
+                  </button>
+                </Link>
+                <Link to={'/login'}>
+                  <button 
+                    onClick={ () => deleteRecipe(recipeId)} 
+                    className="btn btn-danger edit-btn" 
+                    style={{width: "135px", backgroundColor: "red"}}>Delete Recipe
+                  </button>
                 </Link>
               </div>
             </>

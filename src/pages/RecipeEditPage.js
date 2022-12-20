@@ -1,7 +1,7 @@
 import './RecipeEditPage.css'
 import axios from 'axios'
 import { useState, useEffect } from 'react';
-import { useParams, useNavigate, Link } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import MainNavbar from '../components/MainNavbar';
 import SecondNavbar from '../components/SecondNavbar';
 
