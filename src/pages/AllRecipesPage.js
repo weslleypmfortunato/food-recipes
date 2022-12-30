@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import MainNavbar from '../components/MainNavbar';
 import SecondNavbar from '../components/SecondNavbar'
+import AdSense1 from '../components/AdSense1';
 
 const apiURL = "https://ironrest.cyclic.app/fast-food-recipe-project-II"
 
@@ -18,17 +19,19 @@ const AllRecipesPage = () => {
       }).catch(err => console.log(err))
   }, [])
 
+
   return ( 
     <div className="AllRecipesPage">
       <MainNavbar />
       <SecondNavbar />
+      <AdSense1 />
       <h2 style={{color: "black"}}>All recipes in one place</h2>
         <table className="table">
           <tbody>
             <tr className='single-recipe'>
               {
                 recipes.map(recipe => {
-                  return(
+                  return (
                     <td>
                       <div key={recipe._id} className='recipes'>
                         <h5 style={{fontSize: "1rem", marginTop: "10px", textAlign: "center"}}><b>{ recipe.name }</b></h5>

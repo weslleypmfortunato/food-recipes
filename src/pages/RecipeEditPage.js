@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import MainNavbar from '../components/MainNavbar';
 import SecondNavbar from '../components/SecondNavbar';
+import AdSense1 from '../components/AdSense1';
 
 const apiURL = "https://ironrest.cyclic.app/fast-food-recipe-project-II"
 
@@ -54,8 +55,11 @@ const RecipeEditPage = () => {
 
   return ( 
     <div className="RecipeEditPage">
-      <MainNavbar />
-      <SecondNavbar />
+      <div className="adsense">
+        <MainNavbar />
+        <SecondNavbar />
+        <AdSense1 />
+      </div>
       <h2 style={{color: "black", marginTop: "32px", marginBottom: "32px", textAlign: "center"}}>Edit Recipe</h2>
 
       <form onSubmit={ handleSubmit }>

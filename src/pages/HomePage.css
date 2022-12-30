@@ -5,6 +5,12 @@
   justify-content: center;
 }
 
+.adsense2 {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
 .title-carousel {
   display: grid;
   place-items: center;
