@@ -7,6 +7,7 @@ import NewRecipePage from './pages/NewRecipePage';
 import FakeLoginPage from './pages/FakeLoginPage';
 import FakeSignupPage from './pages/FakeSignupPage';
 import RecipeEditPage from './pages/RecipeEditPage';
+import CookiesPage from './pages/CookiesPage';
 
 
 function App() {
@@ -19,7 +20,8 @@ function App() {
         <Route path='/new-recipe' element={ <NewRecipePage /> }/>
         <Route path='/login' element={ <FakeLoginPage /> }/>
         <Route path='/signup' element={ <FakeSignupPage /> }/>
-        <Route path='edit/:recipeId' element={ <RecipeEditPage /> }/>
+        <Route path='/edit/:recipeId' element={ <RecipeEditPage /> }/>
+        <Route path='/recipes/:categoryGroup' element={ <CookiesPage /> }/>
       </Routes>
     </div>
   );

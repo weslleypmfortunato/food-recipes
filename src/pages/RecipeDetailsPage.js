@@ -5,6 +5,7 @@ import axios from 'axios'
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { Link } from 'react-router-dom';
+import AdSense1 from '../components/AdSense1';
 
 const apiURL = "https://ironrest.cyclic.app/fast-food-recipe-project-II"
 
@@ -38,6 +39,7 @@ const RecipeDetailsPage = () => {
               <div className='title-img'>
                 <h3>{ recipe.name }</h3>
                 <img src={ recipe.imageUrl } alt="Recipe Detail" className='detailed-img'/>
+              <AdSense1 />
               </div>
               <div className='detailed-info'>
                 <p><b>Preparation Time:</b> { recipe.prepationTime }</p>

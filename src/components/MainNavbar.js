@@ -1,10 +1,30 @@
+import axios from "axios";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import logo from '../assets/images/logo1.png'
+import SearchRecipePage from "../pages/SearchRecipePage";
 import './MainNavbar.css'
 
+const apiURL = "https://ironrest.cyclic.app/fast-food-recipe-project-II"
+
 const MainNavbar = () => {
-  const handleSubmit = e => {
-    e.preventDefault()
+  const [recipes, setRecipes] = useState('')
+  const [searchRecipes, setSearchRecipes] = ['']
+
+  useEffect(() => {
+    axios.get(apiURL)
+    .then(response => {
+      setRecipes(response.data)
+    }).catch(err => console.log(err))
+  })
+
+  const searchRecipe = () => {
+    axios.get(apiURL)
+      .then(response => {
+        searchRecipes.filter(recipe => {
+          return (recipe.name.toLowerCase().includes(searchRecipes.toLowerCase()))
+      })
+    })
   }
 
   return ( 
@@ -26,19 +46,9 @@ const MainNavbar = () => {
               <Link style={{color: "white", backgroundColor: "#FF0403"}}>ABOUT US</Link>
             </li>
           </ul>
-          <form onSubmit={handleSubmit} className="search-group" role="search">
-            <input 
-              className="form-control me-2 search-bar" 
-              type="search" 
-              placeholder="Search for a recipe  🥕🧄🌽" 
-              aria-label="Search" 
-              style={{width: "250px"}}/>
-            <button 
-              className="btn btn-success search-btn" 
-              type="submit" 
-              style={{color: "black", backgroundColor: "white", borderColor: "lightgray"}}>Search
-            </button>
-          </form>
+
+          <SearchRecipePage searchRecipe={ searchRecipe }/>
+
         </div>
       </div>
     </nav>

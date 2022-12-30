@@ -4,6 +4,8 @@ import SecondNavbar from "../components/SecondNavbar";
 import axios from 'axios'
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import AdSense1 from '../components/AdSense1';
+import AdSense2 from '../components/AdSense2';
 
 const apiURL = "https://ironrest.cyclic.app/fast-food-recipe-project-II"
 
@@ -77,8 +79,11 @@ const NewRecipePage = () => {
 
   return ( 
     <div className="NewRecipePage">
-      <MainNavbar />
-      <SecondNavbar />
+      <div class="adsense">
+        <MainNavbar />
+        <SecondNavbar />
+        <AdSense1 />
+      </div>
       <h2 style={{color: "black", marginTop: "32px", textAlign: "center"}}>Add a new recipe</h2>
       <form onSubmit={ handleSubmit } className='form'>
         <div className="input-group-sm flex-nowrap">
@@ -198,10 +203,7 @@ const NewRecipePage = () => {
               { ingredients.length > 0 &&
                 ingredients.map((item, index) => {
                   return (
-                    <div className="test">
-                      <p key={index} style={{maxWidth: "400px", marginTop: "5px"}}> <span className="input-color">{ item.quantity }</span> - { item.ingredient }</p>
-                      <p style={{maxWidth: "400px"}}>..............................................................................................................</p>
-                    </div>
+                      <p key={index} style={{maxWidth: "400px", marginTop: "5px", borderBottom: "1px dotted lightgray"}}> <span className="input-color">{ item.quantity }</span> - { item.ingredient }</p>
                   )
                 })
               }
@@ -237,10 +239,7 @@ const NewRecipePage = () => {
               { steps.length > 0 &&
                 steps.map((stepItem, stepIndex) => {
                   return (
-                    <div>
-                      <p key={stepIndex} style={{maxWidth: "400px", marginTop: "5px"}}> <span className="input-color">{ stepItem.stepNum })</span> { stepItem.toDo }</p>
-                      <p style={{maxWidth: "400px"}}>..............................................................................................................</p>
-                    </div>
+                      <p key={stepIndex} style={{maxWidth: "400px", marginTop: "5px", borderBottom: "1px dotted lightgray"}}> <span className="input-color">{ stepItem.stepNum })</span> { stepItem.toDo }</p>
                   )
                 })
               }
@@ -276,17 +275,14 @@ const NewRecipePage = () => {
               { nutrition.length > 0 &&
                 nutrition.map((nutritionItem, nutritionIndex) => {
                   return (
-                    <div>
-                      <p key={nutritionIndex} style={{maxWidth: "400px", marginTop: "5px"}}> <span className="input-color">{ nutritionItem.nutritionQty }</span>  { nutritionItem.nutritionUnit }</p>
-                      <p style={{maxWidth: "400px"}}>..............................................................................................................</p>
-                    </div>
+                      <p key={nutritionIndex} style={{maxWidth: "400px", marginTop: "5px", borderBottom: "1px dotted lightgray"}}> <span className="input-color">{ nutritionItem.nutritionQty }</span>  { nutritionItem.nutritionUnit }</p>
                   )
                 })
               }
             </div>
           </div>
-
           <button type="submit" className="btn btn-outline-primary btn-sm submit-btn">Add Recipe</button>
+        <AdSense1 />
         </div>
       </form>
     </div>

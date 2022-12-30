@@ -4,6 +4,7 @@ import appStore from '../assets/images/app-store.png'
 import { Link } from 'react-router-dom';
 import MainNavbar from "../components/MainNavbar";
 import SecondNavbar from "../components/SecondNavbar";
+import AdSense1 from '../components/AdSense1';
 
 const FakeSignupPage = () => {
   return ( 
@@ -34,6 +35,7 @@ const FakeSignupPage = () => {
       <p className='no-account'>Have an account? <span className="signup"><Link to={'/login'}>Log in</Link></span></p>
       <p>Get the app.</p>
       <a href="https://www.apple.com/ca/app-store/" target="_blank" rel="noopener noreferrer"><img src={ appStore } alt="App Buttons" className='app-store'/></a>
+      <AdSense1 />
     </div>
    );
 }

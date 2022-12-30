@@ -3,6 +3,7 @@ import MainNavbar from "../components/MainNavbar";
 import SecondNavbar from "../components/SecondNavbar";
 import Cards from '../components/Cards';
 import Carousell from '../components/Carousell';
+import AdSense2 from '../components/AdSense2';
 
 const HomePage = () => {
   return ( 
@@ -12,7 +13,11 @@ const HomePage = () => {
       <div className="HomePage">
         <div className="row">
           <div className="col title-carousel">
-            <Carousell />
+            <div class="adsense2">
+              <AdSense2 />
+              <Carousell />
+              <AdSense2 />
+            </div>
             <div className="Cards">
               <Cards />
               <Cards />
