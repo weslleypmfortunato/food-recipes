@@ -1,0 +1,27 @@
+.footer {
+  display: grid;
+  place-items: center;
+}
+
+.copyright {
+  margin-bottom: -3px;
+  font-size: 0.75rem;
+}
+
+.developers span {
+  color: black;
+  font-weight: 500;
+  font-size: 0.75rem;
+}
+
+.developers > a {
+  text-decoration: none;
+  color: black;
+  font-size: 0.75rem;
+}
+
+.developers > a:hover {
+  color: red;
+  font-size: 0.8rem;
+  font-weight: 600;
+}

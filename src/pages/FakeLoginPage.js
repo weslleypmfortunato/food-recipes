@@ -6,6 +6,7 @@ import MainNavbar from "../components/MainNavbar";
 import SecondNavbar from "../components/SecondNavbar";
 import AdSense1 from '../components/AdSense1';
 import AdSense2 from '../components/AdSense2';
+import Footer from '../components/Footer';
 
 const FakeLoginPage = () => {
   return ( 
@@ -37,6 +38,7 @@ const FakeLoginPage = () => {
       </div>
   
       <AdSense1 />
+      <Footer />
     </div>
    );
 }

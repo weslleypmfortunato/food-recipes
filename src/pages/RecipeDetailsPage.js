@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { Link } from 'react-router-dom';
 import AdSense1 from '../components/AdSense1';
+import Footer from '../components/Footer';
 
 const apiURL = "https://ironrest.cyclic.app/fast-food-recipe-project-II"
 
@@ -84,12 +85,13 @@ const RecipeDetailsPage = () => {
                   </button>
                 </Link>
                 <Link to={'/login'}>
-                  <button 
-                    onClick={ () => deleteRecipe(recipeId)} 
-                    className="btn btn-danger edit-btn" 
-                    style={{width: "135px", backgroundColor: "red"}}>Delete Recipe
+                  <button
+                    onClick={ () => deleteRecipe(recipeId)}
+                    className="edit-btn delete-btn"
+                  >Delete Recipe 
                   </button>
                 </Link>
+                <Footer />
               </div>
             </>
           }

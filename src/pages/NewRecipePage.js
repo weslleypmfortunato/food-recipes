@@ -5,7 +5,7 @@ import axios from 'axios'
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import AdSense1 from '../components/AdSense1';
-import AdSense2 from '../components/AdSense2';
+import Footer from '../components/Footer';
 
 const apiURL = "https://ironrest.cyclic.app/fast-food-recipe-project-II"
 
@@ -285,6 +285,7 @@ const NewRecipePage = () => {
         <AdSense1 />
         </div>
       </form>
+      <Footer />
     </div>
    );
 }

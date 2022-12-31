@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import MainNavbar from '../components/MainNavbar';
 import SecondNavbar from '../components/SecondNavbar'
 import AdSense1 from '../components/AdSense1';
+import Footer from '../components/Footer';
 
 const apiURL = "https://ironrest.cyclic.app/fast-food-recipe-project-II"
 
@@ -48,6 +49,7 @@ const AllRecipesPage = () => {
             </tr>
           </tbody>
         </table>
+        <Footer />
     </div>
    );
 }

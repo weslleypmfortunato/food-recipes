@@ -5,6 +5,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 import MainNavbar from '../components/MainNavbar';
 import SecondNavbar from '../components/SecondNavbar';
 import AdSense1 from '../components/AdSense1';
+import Footer from '../components/Footer'
 
 const apiURL = "https://ironrest.cyclic.app/fast-food-recipe-project-II"
 
@@ -15,6 +16,7 @@ const RecipeEditPage = () => {
   const [servings, setServings] = useState('')
   const [owner, setOwner] = useState('')
   const [category, setCategory] = useState('')
+  const [ingredient, setIngredient] = useState('')
 
 
   const { recipeId } = useParams()
@@ -29,7 +31,8 @@ const RecipeEditPage = () => {
           prepationTime,
           servings,
           owner,
-          category
+          category,
+          ingredient
         } = response.data
         setName(name)
         setImageUrl(imageUrl)
@@ -37,13 +40,14 @@ const RecipeEditPage = () => {
         setServings(servings)
         setOwner(owner)
         setCategory(category)
+        setIngredient(ingredient)
       }).catch(err => console.log(err))
   }, [recipeId])
 
   const handleSubmit = e => {
     e.preventDefault()
     const editRecipe = {
-      name, imageUrl, prepationTime, servings, owner, category
+      name, imageUrl, prepationTime, servings, owner, category, ingredient
     }
 
     axios.put(`${apiURL}/${recipeId}`, editRecipe)
@@ -147,10 +151,35 @@ const RecipeEditPage = () => {
             <option value="soup">Soup</option>
           </select>
         </div>
-      </form>
 
+        {/* <div className="edit-ingredients">
+          {
+            ingredient.ingredients.map((condiment, condimentIndex) => {
+              return (
+
+                <div className="input-group-sm mb-3">
+                  <span className="input-group-text" id="basic-addon1" style={{width: "100px"}} >Ingredients</span>
+                  <input 
+                    type="text"
+                    className='form-control'
+                    placeholder="Add ingredient"
+                    aria-label='Ingredient'
+                    aria-describedby='basic-addon1'
+                    value={ingredient}
+                    onChange={ e => setIngredient(e.target.value) } />
+                </div>
+               
+              )
+            })
+          }
+        </div> */}
+      </form>
+      <Footer />
     </div>
    );
 }
  
 export default RecipeEditPage;
+
+// não consigo acessar os ingredientes um a um. Isso vai acontecer com os
+// steps e com os nutrients também
