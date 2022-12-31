@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import MainNavbar from "../components/MainNavbar";
 import SecondNavbar from "../components/SecondNavbar";
 import AdSense1 from '../components/AdSense1';
+import Footer from '../components/Footer'
 
 const FakeSignupPage = () => {
   return ( 
@@ -36,6 +37,7 @@ const FakeSignupPage = () => {
       <p>Get the app.</p>
       <a href="https://www.apple.com/ca/app-store/" target="_blank" rel="noopener noreferrer"><img src={ appStore } alt="App Buttons" className='app-store'/></a>
       <AdSense1 />
+      <Footer />
     </div>
    );
 }
