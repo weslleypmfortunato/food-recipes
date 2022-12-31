@@ -1,0 +1,50 @@
+.AboutUsPage {
+  display: grid;
+  place-items: center;
+}
+
+.full-description {
+  max-width: 800px;
+  margin: auto;
+  margin-bottom: 30px;
+}
+
+.description {
+  display: flex;
+  justify-content: space-between;
+  max-width: 800px;
+  gap: 200px;
+}
+
+.description p {
+  width: 300px;
+}
+
+.profiles {
+  width: 100px;
+  border-radius: 50%;
+  border: 0.5px solid lightgray;
+  margin-bottom: 10px;
+}
+
+.img-profile {
+  height: 100px;
+}
+
+.single-profile {
+  display: grid;
+  place-items: center;
+}
+
+.social-medias-icons {
+  display: flex;
+  gap: 16px;
+  margin-top: 5px;
+}
+
+.icons {
+  width: 30px;
+  height: 30px;
+  margin-bottom: 50px;
+}
+

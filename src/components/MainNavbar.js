@@ -43,7 +43,7 @@ const MainNavbar = () => {
               <Link to={'/login'} style={{color: "white", backgroundColor: "#FF0403"}}>LOG IN</Link>
             </li>
             <li className="mainnavbar-links">
-              <Link style={{color: "white", backgroundColor: "#FF0403"}}>ABOUT US</Link>
+              <Link to={'/about'} style={{color: "white", backgroundColor: "#FF0403"}}>ABOUT US</Link>
             </li>
           </ul>
 
