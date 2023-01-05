@@ -19,3 +19,13 @@
   background-color: red;
   border: 1px, solid black;
 }
+
+.sub-title {
+  text-align: center;
+  max-width: 300px;
+  margin: auto;
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+

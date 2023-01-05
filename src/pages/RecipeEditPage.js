@@ -16,13 +16,17 @@ const RecipeEditPage = () => {
   const [servings, setServings] = useState('')
   const [owner, setOwner] = useState('')
   const [category, setCategory] = useState('')
-  const [ingredient, setIngredient] = useState('')
-
+  const [ingredients, setIngredients] = useState('')
+  const [steps, setSteps] = useState('')
+  const [nutrition, setNutrition] = useState('')
+  const [loading, setLoading] = useState(true)
 
   const { recipeId } = useParams()
+  console.log(recipeId)
   const navigate = useNavigate
 
   useEffect(() => {
+    console.log("axios")
     axios.get(`${apiURL}/${recipeId}`)
       .then(response => {
         const {
@@ -32,7 +36,9 @@ const RecipeEditPage = () => {
           servings,
           owner,
           category,
-          ingredient
+          ingredients,
+          steps, 
+          nutrition
         } = response.data
         setName(name)
         setImageUrl(imageUrl)
@@ -40,14 +46,17 @@ const RecipeEditPage = () => {
         setServings(servings)
         setOwner(owner)
         setCategory(category)
-        setIngredient(ingredient)
+        setIngredients(ingredients)
+        setSteps(steps)
+        setNutrition(nutrition)
+        setLoading(false)
       }).catch(err => console.log(err))
   }, [recipeId])
 
   const handleSubmit = e => {
     e.preventDefault()
     const editRecipe = {
-      name, imageUrl, prepationTime, servings, owner, category, ingredient
+      name, imageUrl, prepationTime, servings, owner, category, ingredients, steps, nutrition
     }
 
     axios.put(`${apiURL}/${recipeId}`, editRecipe)
@@ -55,6 +64,10 @@ const RecipeEditPage = () => {
         console.log("Atualizado")
         navigate('/recipes')
       }).catch(err => console.log(err))
+  }
+
+  if (loading) {
+    return <h1>Loading...</h1>
   }
 
   return ( 
@@ -131,9 +144,10 @@ const RecipeEditPage = () => {
           <span 
             className="input-group-text" 
               id="addon-wrapping"
-              style={{width: "100px"}}>Group: </span>
+              style={{width: "100px", marginBottom: "10px"}}>Group: </span>
           <select 
             className="new-recipe-select" 
+            style={{marginBottom: "10px"}}
             aria-label=".form-select-sm example"
             value={category}
             onChange={ e => setCategory(e.target.value) }>
@@ -152,27 +166,119 @@ const RecipeEditPage = () => {
           </select>
         </div>
 
-        {/* <div className="edit-ingredients">
+        <h5 className='sub-title'>--- INGREDIENTS ---</h5>
+        <div className="edit-ingredients">
           {
-            ingredient.ingredients.map((condiment, condimentIndex) => {
+            ingredients.map((condiment, condimentIndex) => {
               return (
-
                 <div className="input-group-sm mb-3">
-                  <span className="input-group-text" id="basic-addon1" style={{width: "100px"}} >Ingredients</span>
+                  <span 
+                    className="input-group-text ingredients-steps-nutrients" id="basic-addon1" 
+                    style={{width: "100px"}} >Ingredient</span>
                   <input 
                     type="text"
                     className='form-control'
+                    style={{width: "445px"}}
                     placeholder="Add ingredient"
                     aria-label='Ingredient'
                     aria-describedby='basic-addon1'
-                    value={ingredient}
-                    onChange={ e => setIngredient(e.target.value) } />
+                    value={condiment.ingredient}
+                    onChange={ e => setIngredients(e.target.value) } />
+                  <span 
+                    className="input-group-text" 
+                    id="basic-addon1" 
+                    style={{width: "75px", marginLeft: "8px"}} >Quantity</span>
+                  <input 
+                    type="text"
+                    className='form-control'
+                    style={{width: "72px", textAlign: "center"}}
+                    placeholder="Add ingredient"
+                    aria-label='Ingredient'
+                    aria-describedby='basic-addon1'
+                    value={condiment.quantity}
+                    onChange={ e => setIngredients(e.target.value) } />
                 </div>
-               
               )
             })
           }
-        </div> */}
+        </div>
+
+        <h5 className='sub-title'>--- STEPS ---</h5>
+        <div className="edit-ingredients">
+          {
+            steps.map((step, stepIndex) => {
+              return (
+                <div className="input-group-sm mb-3">
+                  <span 
+                    className="input-group-text ingredients-steps-nutrients" id="basic-addon1" 
+                    style={{width: "80px"}} >Step Num</span>
+                  <input 
+                    type="text"
+                    className='form-control'
+                    style={{width: "72px", textAlign: "center"}}
+                    placeholder="Type step number"
+                    aria-label='StepNum'
+                    aria-describedby='basic-addon1'
+                    value={step.stepNum}
+                    onChange={ e => setSteps(e.target.value) } />
+                  <span 
+                    className="input-group-text" 
+                    id="basic-addon1" 
+                    style={{width: "100px", marginLeft: "8px"}} >Description</span>
+                  <input 
+                    type="text"
+                    className='form-control'
+                    style={{width: "440px"}}
+                    placeholder="Step description"
+                    aria-label='ToDo'
+                    aria-describedby='basic-addon1'
+                    value={step.toDo}
+                    onChange={ e => setSteps(e.target.value) } />
+                </div>
+              )
+            })
+          }
+        </div>
+
+        <h5 className='sub-title'>--- NUTRITION FACTS ---</h5>
+        <div className="edit-ingredients">
+          {
+            nutrition.map((nutrient, nutrientIndex) => {
+              return (
+                <div className="input-group-sm mb-3">
+                  <span 
+                    className="input-group-text ingredients-steps-nutrients" id="basic-addon1" 
+                    style={{width: "100px"}} >Nutrition Qty</span>
+                  <input 
+                    type="text"
+                    className='form-control'
+                    style={{width: "72px", textAlign: "center"}}
+                    placeholder="Type nutrition quantity"
+                    aria-label='nutritionQty'
+                    aria-describedby='basic-addon1'
+                    value={nutrient.nutritionQty}
+                    onChange={ e => setNutrition(e.target.value) } />
+                  <span 
+                    className="input-group-text" 
+                    id="basic-addon1" 
+                    style={{width: "100px", marginLeft: "8px"}} >Nutrition Info</span>
+                  <input 
+                    type="text"
+                    className='form-control'
+                    style={{width: "420px"}}
+                    placeholder="Nutrition Unit"
+                    aria-label='nutritionUnit'
+                    aria-describedby='basic-addon1'
+                    value={nutrient.nutritionUnit}
+                    onChange={ e => setNutrition(e.target.value) } />
+                </div>
+              )
+            })
+          }
+        </div>
+
+
+
       </form>
       <Footer />
     </div>
