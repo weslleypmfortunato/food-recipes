@@ -22,11 +22,9 @@ const RecipeEditPage = () => {
   const [loading, setLoading] = useState(true)
 
   const { recipeId } = useParams()
-  console.log(recipeId)
   const navigate = useNavigate
 
   useEffect(() => {
-    console.log("axios")
     axios.get(`${apiURL}/${recipeId}`)
       .then(response => {
         const {
@@ -61,7 +59,6 @@ const RecipeEditPage = () => {
 
     axios.put(`${apiURL}/${recipeId}`, editRecipe)
       .then(response => {
-        console.log("Atualizado")
         navigate('/recipes')
       }).catch(err => console.log(err))
   }
@@ -276,9 +273,6 @@ const RecipeEditPage = () => {
             })
           }
         </div>
-
-
-
       </form>
       <Footer />
     </div>
@@ -286,6 +280,3 @@ const RecipeEditPage = () => {
 }
  
 export default RecipeEditPage;
-
-// não consigo acessar os ingredientes um a um. Isso vai acontecer com os
-// steps e com os nutrients também

@@ -2,14 +2,14 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import logo from '../assets/images/logo1.png'
-import SearchRecipePage from "../pages/SearchRecipePage";
 import './MainNavbar.css'
+import ReactSearchBox from "react-search-box";
+import React, { Component } from "react";
 
 const apiURL = "https://ironrest.cyclic.app/fast-food-recipe-project-II"
 
-const MainNavbar = () => {
+const MainNavbar = ({setFilteredRecipe}) => {
   const [recipes, setRecipes] = useState('')
-  const [searchRecipes, setSearchRecipes] = ['']
 
   useEffect(() => {
     axios.get(apiURL)
@@ -18,14 +18,12 @@ const MainNavbar = () => {
     }).catch(err => console.log(err))
   })
 
-  const searchRecipe = () => {
-    axios.get(apiURL)
-      .then(response => {
-        searchRecipes.filter(recipe => {
-          return (recipe.name.toLowerCase().includes(searchRecipes.toLowerCase()))
-      })
-    })
-  }
+  // const searchRecipe = (word) => {
+  //   let filteredResults = [...recipes].filter(recipe => {
+  //     return (recipe.name.toLowerCase().includes(word.toLowerCase()))
+  //   })
+  //   setFilteredRecipe(filteredResults)
+  // }
 
   return ( 
     <nav style={{backgroundColor: "#FF0403", width: "100vw"}}>
@@ -47,8 +45,41 @@ const MainNavbar = () => {
             </li>
           </ul>
 
-          <SearchRecipePage searchRecipe={ searchRecipe }/>
+          {/* <ReactSearchBox
+      placeholder="Search for John, Jane or Mary"
+      data={[
+        {
+          key: "john",
+          value: "John Doe"
+        },
+        {
+          key: "jane",
+          value: "Jane Doe"
+        },
+        {
+          key: "mary",
+          value: "Mary Phillips"
+        },
+        {
+          key: "robert",
+          value: "Robert"
+        },
+        {
+          key: "karius",
+          value: "Karius"
+        }
+      ]}
+      onSelect={(record) => console.log(record)}
+      onFocus={() => {
+        console.log("This function is called when is focussed");
+      }}
+      onChange={(value) => console.log(value)}
+      autoFocus
+      leftIcon={<>🎨</>}
+      iconBoxSize="48px"
+    /> */}
 
+      
         </div>
       </div>
     </nav>
