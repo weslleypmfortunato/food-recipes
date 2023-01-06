@@ -1,4 +1,5 @@
 import './HomePage.css'
+import { useState } from 'react';
 import MainNavbar from "../components/MainNavbar";
 import SecondNavbar from "../components/SecondNavbar";
 import Cards from '../components/Cards';
@@ -9,9 +10,12 @@ import Footer from '../components/Footer';
 import Iframe from '../components/Iframe';
 
 const HomePage = () => {
+  const [filteredRecipe, setFilteredRecipe] = useState()
+  console.log(filteredRecipe)
+
   return ( 
     <div className="HomePage">
-      <MainNavbar />
+      <MainNavbar setFilteredRecipe = {setFilteredRecipe}/>
       <SecondNavbar />
       <div className="HomePage">
         <div className="row">

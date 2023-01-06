@@ -7,7 +7,7 @@ import { useParams, Link } from "react-router-dom";
 const apiURL = "https://ironrest.cyclic.app/fast-food-recipe-project-II"
 
 const CookiesPage = () => {
-  const { categoryGroup } = useParams
+  const { categoryGroup } = useParams()
   const [ recipes, setRecipes ] = useState([])
 
   useEffect(() => {
@@ -28,6 +28,8 @@ const CookiesPage = () => {
           <tr className="single-cookie">
             { recipes.category === "cookies" ?
             recipes.map(cookie => {
+
+              {/* fez a consulta, faz um filter, pega todas as categorias cookies e guarda num novo estado */}
                 return (
                   <td>
                     <div key={cookie._id} className="cookies-recipes">
