@@ -3,38 +3,34 @@
   height: 90px;
 }
 
-.mainnavbar-items {
-  display: flex;
-  justify-content: space-between;
-}
-
 .mainnavbar-links a {
   text-decoration: none;
 }
 
 .mainnavbar-links {
   list-style: none;
+  margin-right: 32px;
 }
 
 .list {
-  width: 500px;
   display: flex;
+  align-items: center;
   justify-content: space-between;
-  align-items: center;
-  margin-top: 15px;
 }
 
-.search-group {
-  display: flex;
-  align-items: center;
+.mainnavbar {
+  margin-bottom: -10px;
 }
 
-.search-bar {
-  height: 35px;
+.input {
+  position: relative;
 }
 
-.search-btn {
-  height: 35px;
-  margin-right: 16px;
+.search-list {
+  position: absolute;
+  z-index: 2;
+  background-color: yellow;
 }
+
+
 

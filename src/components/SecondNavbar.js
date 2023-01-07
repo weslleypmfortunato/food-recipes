@@ -24,34 +24,34 @@ const SecondNavbar = () => {
                 <Link to={"/recipes/category/cookies"} className="nav-link active" aria-current="page" style={{backgroundColor: "white"}}>Cookies</Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link active" aria-current="page" style={{backgroundColor: "white"}}>Chicken</Link>
+                <Link to={"/recipes/category/chicken"} className="nav-link active" aria-current="page" style={{backgroundColor: "white"}}>Chicken</Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link active" aria-current="page" style={{backgroundColor: "white"}}>Beef</Link>
+                <Link to={"/recipes/category/beef"} className="nav-link active" aria-current="page" style={{backgroundColor: "white"}}>Beef</Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link active" aria-current="page" style={{backgroundColor: "white"}}>Pork</Link>
+                <Link to={"/recipes/category/pork"} className="nav-link active" aria-current="page" style={{backgroundColor: "white"}}>Pork</Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link active" aria-current="page" style={{backgroundColor: "white"}}>Health Food</Link>
+                <Link to={"/recipes/category/health&food"} className="nav-link active" aria-current="page" style={{backgroundColor: "white"}}>Health Food</Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link active" aria-current="page" style={{backgroundColor: "white"}}>Finger Food</Link>
+                <Link to={"/recipes/category/fingerfood"} className="nav-link active" aria-current="page" style={{backgroundColor: "white"}}>Finger Food</Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link active" aria-current="page" style={{backgroundColor: "white"}}>Drinks</Link>
+                <Link to={"/recipes/category/drinks"} className="nav-link active" aria-current="page" style={{backgroundColor: "white"}}>Drinks</Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link active" aria-current="page" style={{backgroundColor: "white"}}>Salads</Link>
+                <Link to={"/recipes/category/salads"} className="nav-link active" aria-current="page" style={{backgroundColor: "white"}}>Salads</Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link active" aria-current="page" style={{backgroundColor: "white"}}>Pasta</Link>
+                <Link to={"/recipes/category/pasta"} className="nav-link active" aria-current="page" style={{backgroundColor: "white"}}>Pasta</Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link active" aria-current="page" style={{backgroundColor: "white"}}>Fish & Sea</Link>
+                <Link to={"/recipes/category/fish&sea"} className="nav-link active" aria-current="page" style={{backgroundColor: "white"}}>Fish & Sea</Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link active" aria-current="page" style={{backgroundColor: "white"}}>Soup</Link>
+                <Link to={"/recipes/category/soup"} className="nav-link active" aria-current="page" style={{backgroundColor: "white"}}>Soup</Link>
               </li>
               <li className="nav-item">
                 <Link to={'/recipes'} className="nav-link active" aria-current="page" style={{backgroundColor: "white"}}>All Recipes</Link>
