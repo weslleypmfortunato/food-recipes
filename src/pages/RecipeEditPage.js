@@ -51,11 +51,53 @@ const RecipeEditPage = () => {
       }).catch(err => console.log(err))
   }, [recipeId])
 
+  const changeIngredient = (i, newIngredient) => {
+    let copyIngredients = [...ingredients]
+    const updatedIngredient = copyIngredients[i]
+    updatedIngredient.ingredient = newIngredient
+    setIngredients(copyIngredients)
+  }
+
+  const changeIngredientQty = (i, newIngredientQty) => {
+    let copyIngredients = [...ingredients]
+    const updatedIngredientQty = copyIngredients[i]
+    updatedIngredientQty.quantity = newIngredientQty
+    setIngredients(copyIngredients)
+  }
+
+  const changeStepNum = (i, newStepNum) => {
+    let copySteps = [...steps]
+    const updatedSteps = copySteps[i]
+    updatedSteps.stepNum = newStepNum
+    setSteps(copySteps)
+  }
+
+  const changeToDo = (i, newToDo) => {
+    let copySteps = [...steps]
+    const updatedToDo = copySteps[i]
+    updatedToDo.toDo = newToDo
+    setSteps(copySteps)
+  }
+
+  const changeNutritionQty = (i, newNutritionQty) => {
+    let copyNutrition = [...nutrition]
+    const updatedNutritionQty = copyNutrition[i]
+    updatedNutritionQty.nutritionQty = newNutritionQty
+    setNutrition(copyNutrition)
+  }
+
+  const changeNutritionUnit = (i, newNutritionUnit) => {
+    let copyNutrition = [...nutrition]
+    const updatedNutritionUnit = copyNutrition[i]
+    updatedNutritionUnit.nutritionUnit = newNutritionUnit
+    setNutrition(copyNutrition)
+  }
+
   const handleSubmit = e => {
+    console.log("entrei")
     e.preventDefault()
     const editRecipe = {
-      name, imageUrl, prepationTime, servings, owner, category, ingredients, steps, nutrition
-    }
+      name, imageUrl, prepationTime, servings, owner, category, ingredients, steps, nutrition}
 
     axios.put(`${apiURL}/${recipeId}`, editRecipe)
       .then(response => {
@@ -168,8 +210,21 @@ const RecipeEditPage = () => {
           {
             ingredients.map((condiment, condimentIndex) => {
               return (
-                <div className="input-group-sm mb-3">
+                <div key={condimentIndex} className="input-group-sm mb-3">
                   <span 
+                    className="input-group-text" 
+                    id="basic-addon1" 
+                    style={{width: "75px"}} >Quantity</span>
+                  <input 
+                    type="text"
+                    className='form-control'
+                    style={{width: "72px", textAlign: "center", marginRight: "8px"}}
+                    placeholder="Add ingredient"
+                    aria-label='Ingredient'
+                    aria-describedby='basic-addon1'
+                    value={condiment.quantity}
+                    onChange={ e => changeIngredientQty(condimentIndex, e.target.value) } />
+                    <span 
                     className="input-group-text ingredients-steps-nutrients" id="basic-addon1" 
                     style={{width: "100px"}} >Ingredient</span>
                   <input 
@@ -180,20 +235,7 @@ const RecipeEditPage = () => {
                     aria-label='Ingredient'
                     aria-describedby='basic-addon1'
                     value={condiment.ingredient}
-                    onChange={ e => setIngredients(e.target.value) } />
-                  <span 
-                    className="input-group-text" 
-                    id="basic-addon1" 
-                    style={{width: "75px", marginLeft: "8px"}} >Quantity</span>
-                  <input 
-                    type="text"
-                    className='form-control'
-                    style={{width: "72px", textAlign: "center"}}
-                    placeholder="Add ingredient"
-                    aria-label='Ingredient'
-                    aria-describedby='basic-addon1'
-                    value={condiment.quantity}
-                    onChange={ e => setIngredients(e.target.value) } />
+                    onChange={ e => changeIngredient(condimentIndex, e.target.value) } />
                 </div>
               )
             })
@@ -205,7 +247,7 @@ const RecipeEditPage = () => {
           {
             steps.map((step, stepIndex) => {
               return (
-                <div className="input-group-sm mb-3">
+                <div key={stepIndex} className="input-group-sm mb-3">
                   <span 
                     className="input-group-text ingredients-steps-nutrients" id="basic-addon1" 
                     style={{width: "80px"}} >Step Num</span>
@@ -217,7 +259,7 @@ const RecipeEditPage = () => {
                     aria-label='StepNum'
                     aria-describedby='basic-addon1'
                     value={step.stepNum}
-                    onChange={ e => setSteps(e.target.value) } />
+                    onChange={ e => changeStepNum(stepIndex, e.target.value) } />
                   <span 
                     className="input-group-text" 
                     id="basic-addon1" 
@@ -230,7 +272,7 @@ const RecipeEditPage = () => {
                     aria-label='ToDo'
                     aria-describedby='basic-addon1'
                     value={step.toDo}
-                    onChange={ e => setSteps(e.target.value) } />
+                    onChange={ e => changeToDo(stepIndex, e.target.value) } />
                 </div>
               )
             })
@@ -242,7 +284,7 @@ const RecipeEditPage = () => {
           {
             nutrition.map((nutrient, nutrientIndex) => {
               return (
-                <div className="input-group-sm mb-3">
+                <div key={nutrientIndex} className="input-group-sm mb-3">
                   <span 
                     className="input-group-text ingredients-steps-nutrients" id="basic-addon1" 
                     style={{width: "100px"}} >Nutrition Qty</span>
@@ -254,7 +296,7 @@ const RecipeEditPage = () => {
                     aria-label='nutritionQty'
                     aria-describedby='basic-addon1'
                     value={nutrient.nutritionQty}
-                    onChange={ e => setNutrition(e.target.value) } />
+                    onChange={ e => changeNutritionQty(nutrientIndex, e.target.value) } />
                   <span 
                     className="input-group-text" 
                     id="basic-addon1" 
@@ -267,12 +309,18 @@ const RecipeEditPage = () => {
                     aria-label='nutritionUnit'
                     aria-describedby='basic-addon1'
                     value={nutrient.nutritionUnit}
-                    onChange={ e => setNutrition(e.target.value) } />
+                    onChange={ e => changeNutritionUnit(nutrientIndex, e.target.value) } />
                 </div>
               )
             })
           }
         </div>
+      <button 
+        type="submit" 
+        className="btn btn-outline-primary save"
+        style={{fontWeight: "700"}}
+        >SAVE
+      </button>
       </form>
       <Footer />
     </div>

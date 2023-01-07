@@ -3,13 +3,15 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import logo from '../assets/images/logo1.png'
 import './MainNavbar.css'
-import ReactSearchBox from "react-search-box";
-import React, { Component } from "react";
+import './testeSearch'
+
 
 const apiURL = "https://ironrest.cyclic.app/fast-food-recipe-project-II"
 
 const MainNavbar = ({setFilteredRecipe}) => {
-  const [recipes, setRecipes] = useState('')
+  const [recipes, setRecipes] = useState([])
+  const [search, setSearch] = useState("")
+  const [searchResults, setSearchResults] = useState([])
 
   useEffect(() => {
     axios.get(apiURL)
@@ -17,13 +19,6 @@ const MainNavbar = ({setFilteredRecipe}) => {
       setRecipes(response.data)
     }).catch(err => console.log(err))
   })
-
-  // const searchRecipe = (word) => {
-  //   let filteredResults = [...recipes].filter(recipe => {
-  //     return (recipe.name.toLowerCase().includes(word.toLowerCase()))
-  //   })
-  //   setFilteredRecipe(filteredResults)
-  // }
 
   return ( 
     <nav style={{backgroundColor: "#FF0403", width: "100vw"}}>
@@ -43,44 +38,37 @@ const MainNavbar = ({setFilteredRecipe}) => {
             <li className="mainnavbar-links">
               <Link to={'/about'} style={{color: "white", backgroundColor: "#FF0403"}}>ABOUT US</Link>
             </li>
+
+            <li className="mainnavbar-links">
+              <div>
+                <input 
+                  type="text"
+                  className='form-control'
+                  style={{width: "72px", textAlign: "center"}}
+                  placeholder="Type nutrition quantity"
+                  aria-label='nutritionQty'
+                  aria-describedby='basic-addon1'
+                  value={search}
+                  onChange={e => setSearch(e.target.value)}
+                  />
+                  
+                  { search !== "" &&
+                    recipes.filter(recipe => {
+                    return (recipe.name.toLowerCase().includes(search.toLowerCase())) 
+                    }).map((post, index) => (
+                      <div className="box" key={index}>
+                        <Link to={`/recipes/${post._id}`}>
+                          <p>{post.name}</p>
+                        </Link>
+                      </div>
+                    ))
+                  }
+
+              </div>
+            </li>
+
           </ul>
-
-          {/* <ReactSearchBox
-      placeholder="Search for John, Jane or Mary"
-      data={[
-        {
-          key: "john",
-          value: "John Doe"
-        },
-        {
-          key: "jane",
-          value: "Jane Doe"
-        },
-        {
-          key: "mary",
-          value: "Mary Phillips"
-        },
-        {
-          key: "robert",
-          value: "Robert"
-        },
-        {
-          key: "karius",
-          value: "Karius"
-        }
-      ]}
-      onSelect={(record) => console.log(record)}
-      onFocus={() => {
-        console.log("This function is called when is focussed");
-      }}
-      onChange={(value) => console.log(value)}
-      autoFocus
-      leftIcon={<>🎨</>}
-      iconBoxSize="48px"
-    /> */}
-
-      
-        </div>
+       </div>
       </div>
     </nav>
 );
