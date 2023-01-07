@@ -18,14 +18,12 @@ const CategoryPage = () => {
         setRecipes(response.data)
         
 
-        const cookies = response.data.filter(cookie => {
-          return (cookie.category === "cookies")
+        const categoryRecipes = response.data.filter(recipe => {
+          return (recipe.category === categoryGroup)
         })
-        setFilteredRecipes(cookies)
+        setFilteredRecipes(categoryRecipes)
       }).catch(err => console.log(err))
   }, [categoryGroup])
-
-  console.log(filteredRecipes)
 
   return ( 
     <div className="CookiesPage">

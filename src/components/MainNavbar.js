@@ -3,7 +3,6 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import logo from '../assets/images/logo1.png'
 import './MainNavbar.css'
-import './testeSearch'
 
 
 const apiURL = "https://ironrest.cyclic.app/fast-food-recipe-project-II"
@@ -22,39 +21,41 @@ const MainNavbar = ({setFilteredRecipe}) => {
 
   return ( 
     <nav style={{backgroundColor: "#FF0403", width: "100vw"}}>
-      <div className="MainNavibar">
-        <div className="mainnavbar-items" id="navbarSupportedContent">
-          <Link to={'/'} ><img src={ logo } alt="Logo" className="logo"/></Link>
-          <ul className="list">
-            <li className="mainnavbar-links">
-              <Link to={'/new-recipe'} style={{color: "white", backgroundColor: "#FF0403"}}>SEND A RECIPE</Link>
-            </li>
-            <li className="mainnavbar-links">
-              <Link to={'/signup'} style={{color: "white", backgroundColor: "#FF0403"}}>SIGN UP</Link>
-            </li>
-            <li className="mainnavbar-links">
-              <Link to={'/login'} style={{color: "white", backgroundColor: "#FF0403"}}>LOG IN</Link>
-            </li>
-            <li className="mainnavbar-links">
-              <Link to={'/about'} style={{color: "white", backgroundColor: "#FF0403"}}>ABOUT US</Link>
-            </li>
+      <div className="mainnavbar" id="navbarSupportedContent">
+        <ul className="list">
+          <li className="mainnavbar-links">
+            <Link to={'/'} ><img src={ logo } alt="Logo" className="logo mainnavbar-links"/></Link>
+          </li>
+          <li className="mainnavbar-links">
+            <Link to={'/new-recipe'} style={{color: "white", backgroundColor: "#FF0403"}}>SEND A RECIPE</Link>
+          </li>
+          <li className="mainnavbar-links">
+            <Link to={'/signup'} style={{color: "white", backgroundColor: "#FF0403"}}>SIGN UP</Link>
+          </li>
+          <li className="mainnavbar-links">
+            <Link to={'/login'} style={{color: "white", backgroundColor: "#FF0403"}}>LOG IN</Link>
+          </li>
+          <li className="mainnavbar-links">
+            <Link to={'/about'} style={{color: "white", backgroundColor: "#FF0403"}}>ABOUT US</Link>
+          </li>
 
-            <li className="mainnavbar-links">
-              <div>
-                <input 
-                  type="text"
-                  className='form-control'
-                  style={{width: "72px", textAlign: "center"}}
-                  placeholder="Type nutrition quantity"
-                  aria-label='nutritionQty'
-                  aria-describedby='basic-addon1'
-                  value={search}
-                  onChange={e => setSearch(e.target.value)}
-                  />
+          <li className="mainnavbar-links">
+            <div className="input">
+              <input 
+                type="text"
+                className='form-control search-input'
+                style={{width: "270px", height: "35px"}}
+                placeholder="Search for a recipe           🥕🧄🌽"
+                aria-label='nutritionQty'
+                aria-describedby='basic-addon1'
+                value={search}
+                onChange={e => setSearch(e.target.value)}
+              />
                   
-                  { search !== "" &&
+              <div className="search-list">
+                { search !== "" &&
                     recipes.filter(recipe => {
-                    return (recipe.name.toLowerCase().includes(search.toLowerCase())) 
+                      return (recipe.name.toLowerCase().includes(search.toLowerCase()))
                     }).map((post, index) => (
                       <div className="box" key={index}>
                         <Link to={`/recipes/${post._id}`}>
@@ -63,15 +64,13 @@ const MainNavbar = ({setFilteredRecipe}) => {
                       </div>
                     ))
                   }
-
+              </div>
               </div>
             </li>
-
           </ul>
        </div>
-      </div>
     </nav>
-);
+  );
 }
  
 export default MainNavbar;
