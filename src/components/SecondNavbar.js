@@ -1,8 +1,7 @@
 import './SecondNavbar.css'
-import { Link, useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const SecondNavbar = () => {
-  const { categoryGroup } = useParams
   
   return ( 
     <div className="SecondNav">
@@ -22,7 +21,7 @@ const SecondNavbar = () => {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <Link to={`/recipes/${ categoryGroup }`} className="nav-link active" aria-current="page" style={{backgroundColor: "white"}}>Cookies</Link>
+                <Link to={"/recipes/category/cookies"} className="nav-link active" aria-current="page" style={{backgroundColor: "white"}}>Cookies</Link>
               </li>
               <li className="nav-item">
                 <Link className="nav-link active" aria-current="page" style={{backgroundColor: "white"}}>Chicken</Link>
