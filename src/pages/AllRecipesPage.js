@@ -6,6 +6,7 @@ import MainNavbar from '../components/MainNavbar';
 import SecondNavbar from '../components/SecondNavbar'
 import AdSense1 from '../components/AdSense1';
 import Footer from '../components/Footer';
+import Loading4 from '../assets/images/gifs/loading4.gif'
 
 const apiURL = "https://ironrest.cyclic.app/fast-food-recipe-project-II"
 
@@ -30,7 +31,7 @@ const AllRecipesPage = () => {
         <table className="table">
           <tbody>
             <tr className='single-recipe'>
-              {
+              { recipes.length > 0 ?
                 recipes.map(recipe => {
                   return (
                     <td>
@@ -44,11 +45,15 @@ const AllRecipesPage = () => {
                       </div>
                     </td>
                   )
-                  })
+                  }) :  <div>
+                          <p>Working to bring you the most delicious recipes</p>
+                          <img src={Loading4} alt="Loading GIF" className="gif" />
+                        </div>
                 }
             </tr>
           </tbody>
         </table>
+        <AdSense1 />
         <Footer />
     </div>
    );

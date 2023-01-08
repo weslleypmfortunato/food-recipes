@@ -33,7 +33,7 @@ const SecondNavbar = () => {
                 <Link to={"/recipes/category/pork"} className="nav-link active" aria-current="page" style={{backgroundColor: "white"}}>Pork</Link>
               </li>
               <li className="nav-item">
-                <Link to={"/recipes/category/health&food"} className="nav-link active" aria-current="page" style={{backgroundColor: "white"}}>Health Food</Link>
+                <Link to={"/recipes/category/health food"} className="nav-link active" aria-current="page" style={{backgroundColor: "white"}}>Health Food</Link>
               </li>
               <li className="nav-item">
                 <Link to={"/recipes/category/fingerfood"} className="nav-link active" aria-current="page" style={{backgroundColor: "white"}}>Finger Food</Link>
@@ -42,7 +42,7 @@ const SecondNavbar = () => {
                 <Link to={"/recipes/category/drinks"} className="nav-link active" aria-current="page" style={{backgroundColor: "white"}}>Drinks</Link>
               </li>
               <li className="nav-item">
-                <Link to={"/recipes/category/salads"} className="nav-link active" aria-current="page" style={{backgroundColor: "white"}}>Salads</Link>
+                <Link to={"/recipes/category/salad"} className="nav-link active" aria-current="page" style={{backgroundColor: "white"}}>Salads</Link>
               </li>
               <li className="nav-item">
                 <Link to={"/recipes/category/pasta"} className="nav-link active" aria-current="page" style={{backgroundColor: "white"}}>Pasta</Link>

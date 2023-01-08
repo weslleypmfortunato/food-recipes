@@ -4,6 +4,9 @@ import axios from 'axios'
 import { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import './CategoryPage.css'
+import AdSense1 from "../components/AdSense1";
+import Footer from "../components/Footer";
+import Loading4 from '../assets/images/gifs/loading4.gif'
 
 const apiURL = "https://ironrest.cyclic.app/fast-food-recipe-project-II"
 
@@ -29,9 +32,9 @@ const CategoryPage = () => {
     <div className="CookiesPage">
       <MainNavbar />
       <SecondNavbar />
-      <h2 style={{color: "black"}}>All cookies recipes in one place</h2>
+      <AdSense1 />
+      <h2 style={{color: "black"}}>All {categoryGroup} recipes in one place</h2>
       
-    
       <table>
         <tbody>
           <tr className="single-category">
@@ -39,7 +42,7 @@ const CategoryPage = () => {
             filteredRecipes.map(filteredCookie => {
 
                 return (
-                  <td>
+                  <td className="divisor">
                     <div key={filteredCookie._id} className="category-recipes">
                       <h5 style={{fontSize: "1rem", marginTop: "10px", textAlign: "center"}} className="category-subtitle"><b>{ filteredCookie.name }</b></h5>
                       <Link to={`/recipes/${ filteredCookie._id }`}><img src={ filteredCookie.imageUrl } alt="Cookie" className="category-recipes-img"/></Link>
@@ -50,11 +53,16 @@ const CategoryPage = () => {
                     </div>
                   </td>
                 )
-              }) : "No cookies recipes"
+              }) :  <div>
+                      <p>Working to bring you the most delicious recipes</p>
+                      <img src={Loading4} alt="Loading GIF" className="gif" />
+                    </div>
             } 
           </tr>
         </tbody>
       </table>
+      <AdSense1 />
+      <Footer />
     </div>
    );
 }

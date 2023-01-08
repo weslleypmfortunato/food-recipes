@@ -1,5 +1,6 @@
 import axios from 'axios'
 import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const apiURL = "https://ironrest.cyclic.app/fast-food-recipe-project-II"
 
@@ -22,7 +23,7 @@ const Cards = () => {
         recipes.length === 0 ? <h1> </h1> :
       
       <>
-      <img src={ chosenRecipe.imageUrl } alt="..." className="card-img-top" style={{height: "150px"}}/>
+      <Link to={`/recipes/${ chosenRecipe._id }`} ><img src={ chosenRecipe.imageUrl } alt="..." className="card-img-top" style={{height: "150px"}}/></Link>
       <div className="card-body">
         <h5 className="card-title" style={{textAlign: "center"}}>{ chosenRecipe.name }</h5>
       </div>

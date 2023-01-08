@@ -8,6 +8,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin: 3px 5px 5px;
   border: 0.5px solid lightgray;
   border-radius: 5px;
   width: 250px ;
@@ -30,6 +31,7 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
+  
 }
 
 .category-servings-preparation {
@@ -38,4 +40,13 @@
 
 .category-servings-nomargin {
   margin: 3px 0;
+}
+
+.divisor {
+  border-bottom: 0.5px dotted lightgray;
+  margin-top: 3px;
+}
+
+.gif {
+  width: 300px;
 }

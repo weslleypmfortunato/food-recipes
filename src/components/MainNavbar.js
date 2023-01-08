@@ -44,7 +44,7 @@ const MainNavbar = ({setFilteredRecipe}) => {
               <input 
                 type="text"
                 className='form-control search-input'
-                style={{width: "270px", height: "35px"}}
+                style={{width: "300px", height: "35px"}}
                 placeholder="Search for a recipe           🥕🧄🌽"
                 aria-label='nutritionQty'
                 aria-describedby='basic-addon1'
@@ -59,7 +59,7 @@ const MainNavbar = ({setFilteredRecipe}) => {
                     }).map((post, index) => (
                       <div className="box" key={index}>
                         <Link to={`/recipes/${post._id}`}>
-                          <p>{post.name}</p>
+                          <p style={{color: "black", }} className="search-result">🫑 {post.name} 🌶</p>
                         </Link>
                       </div>
                     ))
