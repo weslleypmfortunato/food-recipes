@@ -22,10 +22,13 @@ const HomePage = () => {
               <Carousell />
               <AdSense2 />
             </div>
-            <div className="Cards">
-              <Cards />
-              <Cards />
-              <Cards />
+            <div className="Cards-highlight">
+              <h4 style={{textAlign: "center", marginTop: "55px"}}>HIGHLIGHTS OF THE WEEK</h4>
+              <div className='cards'>
+                <Cards />
+                <Cards />
+                <Cards />
+              </div>
             </div>
             <AdSense1 />
             <h3>Follow who inspired us</h3>

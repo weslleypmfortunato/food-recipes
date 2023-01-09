@@ -18,8 +18,16 @@
   justify-content: space-between;
 }
 
+
+/* aqui */
 .mainnavbar {
-  margin-bottom: -10px;
+  padding-top: 10px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+  background-color: #FF0403;
 }
 
 .input {

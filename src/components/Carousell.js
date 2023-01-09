@@ -1,7 +1,7 @@
-import './Carousel.css'
 import { Carousel } from 'react-carousel-minimal';
 
 const Carousell = () => {
+
     const data = [
       {
         image: "https://img.cybercook.com.br/receitas/776/feijoada.jpeg",
@@ -31,7 +31,7 @@ const Carousell = () => {
               data={data}
               time={1750}
               width="500px"
-              height="350px"
+              height="400px"
               captionStyle={captionStyle}
               radius="10px"
               captionPosition="bottom"
