@@ -1,6 +1,7 @@
 .RecipeDetailsPage {
   display: grid;
   place-items: center;
+  margin-top: 220px;
 }
 
 .detailed-img {

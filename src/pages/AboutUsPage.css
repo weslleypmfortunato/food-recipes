@@ -1,6 +1,7 @@
 .AboutUsPage {
   display: grid;
   place-items: center;
+  margin-top: 200px;
 }
 
 .full-description {

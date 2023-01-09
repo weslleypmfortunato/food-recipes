@@ -1,4 +1,38 @@
 .SecondNav {
   display: grid;
   place-items: center;
+  position: fixed;
+  top: 115px;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  z-index: 1;
+  padding-top: 10px;
+}
+
+.site-title {
+  background-color: white;
+  width: 100vw;
+  text-align: center;
+}
+
+.nav-item {
+  list-style: none;
+}
+
+.second-nav-link {
+  color: black;
+  text-decoration: none;
+  font-weight: 300;
+  font-size: 0.95rem;
+}
+
+.second-nav-link:hover {
+  color: black;
+  font-size: 1rem;
+}
+
+.second-nav-list {
+  display: flex;
+  gap: 32px;
 }

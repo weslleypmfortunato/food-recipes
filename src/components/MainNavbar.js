@@ -10,7 +10,6 @@ const apiURL = "https://ironrest.cyclic.app/fast-food-recipe-project-II"
 const MainNavbar = ({setFilteredRecipe}) => {
   const [recipes, setRecipes] = useState([])
   const [search, setSearch] = useState("")
-  const [searchResults, setSearchResults] = useState([])
 
   useEffect(() => {
     axios.get(apiURL)

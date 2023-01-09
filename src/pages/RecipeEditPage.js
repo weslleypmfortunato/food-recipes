@@ -22,7 +22,7 @@ const RecipeEditPage = () => {
   const [loading, setLoading] = useState(true)
 
   const { recipeId } = useParams()
-  const navigate = useNavigate
+  const navigate = useNavigate()
 
   useEffect(() => {
     axios.get(`${apiURL}/${recipeId}`)
@@ -94,14 +94,13 @@ const RecipeEditPage = () => {
   }
 
   const handleSubmit = e => {
-    console.log("entrei")
     e.preventDefault()
     const editRecipe = {
       name, imageUrl, prepationTime, servings, owner, category, ingredients, steps, nutrition}
 
     axios.put(`${apiURL}/${recipeId}`, editRecipe)
       .then(response => {
-        navigate('/recipes')
+        navigate(`/recipes/${recipeId}`)
       }).catch(err => console.log(err))
   }
 
