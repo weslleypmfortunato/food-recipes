@@ -6,7 +6,7 @@ import Carousell from '../components/Carousell';
 import AdSense2 from '../components/AdSense2';
 import AdSense1 from '../components/AdSense1';
 import Footer from '../components/Footer';
-import Iframe from '../components/Iframe';
+import Credits from '../components/Credits';
 
 const HomePage = () => {
 
@@ -32,7 +32,7 @@ const HomePage = () => {
             </div>
             <AdSense1 />
             <h3>Follow who inspired us</h3>
-            <Iframe />
+            <Credits />
           </div>
         </div>
       </div>
