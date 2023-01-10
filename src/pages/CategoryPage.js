@@ -19,8 +19,6 @@ const CategoryPage = () => {
     axios.get(apiURL)
       .then(response => {
         setRecipes(response.data)
-        
-
         const categoryRecipes = response.data.filter(recipe => {
           return (recipe.category === categoryGroup)
         })
