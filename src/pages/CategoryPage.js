@@ -42,8 +42,8 @@ const CategoryPage = () => {
             filteredRecipes.map(filteredCookie => {
 
                 return (
-                  <td className="divisor">
-                    <div key={filteredCookie._id} className="category-recipes">
+                  <td key={filteredCookie._id} className="divisor">
+                    <div  className="category-recipes">
                       <h5 style={{fontSize: "1rem", marginTop: "10px", textAlign: "center"}} className="category-subtitle"><b>{ filteredCookie.name }</b></h5>
                       <Link to={`/recipes/${ filteredCookie._id }`}><img src={ filteredCookie.imageUrl } alt="Cookie" className="category-recipes-img"/></Link>
                       <div className="category-servings-preparation">

@@ -34,8 +34,8 @@ const AllRecipesPage = () => {
               { recipes.length > 0 ?
                 recipes.map(recipe => {
                   return (
-                    <td>
-                      <div key={recipe._id} className='recipes'>
+                    <td key={recipe._id}>
+                      <div className='recipes'>
                         <h5 style={{fontSize: "1rem", marginTop: "10px", textAlign: "center"}}><b>{ recipe.name }</b></h5>
                         <Link to={`/recipes/${recipe._id}`}><img src={ recipe.imageUrl } alt="The dish ready" className='all-recipes-img'/></Link>
                         <div className="servings-preparation">

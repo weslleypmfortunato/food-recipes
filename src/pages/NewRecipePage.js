@@ -79,7 +79,7 @@ const NewRecipePage = () => {
 
   return ( 
     <div className="NewRecipePage">
-      <div class="adsense">
+      <div className="adsense">
         <MainNavbar />
         <SecondNavbar />
         <AdSense1 />
