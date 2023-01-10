@@ -100,7 +100,7 @@ const RecipeEditPage = () => {
 
     axios.put(`${apiURL}/${recipeId}`, editRecipe)
       .then(response => {
-        navigate(`/recipes/${recipeId}`)
+        navigate('/login')
       }).catch(err => console.log(err))
   }
 

@@ -16,6 +16,7 @@
   color: white;
   font-weight: 700;
   font-size: 1.15rem;
+  width: 150px;
   background-color: red;
   border: 1px, solid black;
 }

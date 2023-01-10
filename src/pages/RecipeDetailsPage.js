@@ -3,7 +3,7 @@ import MainNavbar from "../components/MainNavbar";
 import SecondNavbar from "../components/SecondNavbar";
 import axios from 'axios'
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import { Link } from 'react-router-dom';
 import AdSense1 from '../components/AdSense1';
 import Footer from '../components/Footer';
@@ -14,6 +14,8 @@ const RecipeDetailsPage = () => {
   const { recipeId } = useParams()
   const [recipe, setRecipe] = useState(null)
   const [refresh, setRefresh] = useState('')
+
+  const navigate = useNavigate()
 
   useEffect(() => {
     axios.get(`${apiURL}/${recipeId}`)
@@ -26,6 +28,7 @@ const RecipeDetailsPage = () => {
     axios.delete(`${apiURL}/${recipeId}`)
       .then(response => {
         setRefresh(!refresh)
+        navigate('/login')
       }).catch(err => console.log(err))
   }
 
@@ -50,8 +53,8 @@ const RecipeDetailsPage = () => {
                 {
                   recipe.ingredients.map((condiment, condimentIndex) => {
                     return (
-                      <div>
-                        <p key={condimentIndex}><span>{ condiment.quantity }</span> - { condiment.ingredient }</p>
+                      <div key={condimentIndex}>
+                        <p><span>{ condiment.quantity }</span> - { condiment.ingredient }</p>
                       </div>
                     )
                   })
@@ -60,8 +63,8 @@ const RecipeDetailsPage = () => {
                 {
                   recipe.steps.map((stepByStep, stepIndex) => {
                     return (
-                      <div>
-                        <p key={stepIndex}><span>{ stepByStep.stepNum} - </span> { stepByStep.toDo }</p>
+                      <div key={stepIndex}>
+                        <p><span>{ stepByStep.stepNum} - </span> { stepByStep.toDo }</p>
                       </div>
                     )
                   })
@@ -71,8 +74,8 @@ const RecipeDetailsPage = () => {
                 {
                   recipe.nutrition.map((nutritionInfo, nutritionIndex) => {
                     return (
-                      <div>
-                        <p key={nutritionIndex}><span>{ nutritionInfo.nutritionQty } </span> { nutritionInfo.nutritionUnit } </p>
+                      <div key={nutritionIndex}>
+                        <p><span>{ nutritionInfo.nutritionQty } </span> { nutritionInfo.nutritionUnit } </p>
                       </div>
                     )
                   })

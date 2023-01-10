@@ -31,7 +31,7 @@ const FakeSignupPage = () => {
           </div>
         </form>
         <p className='policy'>By signing up, you agree to our <span className="learn-more">Terms , Privacy Policy and Cookies Policy</span></p>
-        <Link to={'/login'}><button type="button" class="btn-login" style={{fontWeight: "700"}}>Sign Up</button></Link>
+        <Link to={'/login'}><button type="button" className="btn-login" style={{fontWeight: "700"}}>Sign Up</button></Link>
       </fieldset>
       <p className='no-account'>Have an account? <span className="signup"><Link to={'/login'}>Log in</Link></span></p>
       <p>Get the app.</p>

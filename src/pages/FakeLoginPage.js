@@ -27,7 +27,7 @@ const FakeLoginPage = () => {
                 <input type="password" placeholder='Password'/>
               </div>
             </form>
-            <Link to={'/recipes'}><button type="button" class="btn-login" style={{fontWeight: "700"}}>Log in</button></Link>
+            <Link to={'/recipes'}><button type="button" className="btn-login" style={{fontWeight: "700"}}>Log in</button></Link>
             <p>Forgot password?</p>
           </fieldset>
           <p className='no-account'>Don't have an account? <span className="signup"><Link to={'/signup'}>Sign up</Link></span></p>
