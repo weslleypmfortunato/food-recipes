@@ -31,7 +31,12 @@ const AllRecipesPage = () => {
         <table className="table">
           <tbody>
             <tr className='single-recipe'>
-              { recipes.length > 0 ?
+              { recipes.length === 0 ?
+                <div>
+                  <p>Working to bring you the most delicious recipes</p>
+                  <img src={Loading4} alt="Loading GIF" className="gif" />
+                </div>
+                :
                 recipes.map(recipe => {
                   return (
                     <td key={recipe._id}>
@@ -45,10 +50,7 @@ const AllRecipesPage = () => {
                       </div>
                     </td>
                   )
-                  }) :  <div>
-                          <p>Working to bring you the most delicious recipes</p>
-                          <img src={Loading4} alt="Loading GIF" className="gif" />
-                        </div>
+                  }) 
                 }
             </tr>
           </tbody>
