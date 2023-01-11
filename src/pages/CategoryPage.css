@@ -51,3 +51,14 @@
 .gif {
   width: 300px;
 }
+
+.gif-center {
+  display: grid;
+  place-items: center;
+}
+
+@media screen and (max-width: 765px) {
+  .CookiesPage {
+    margin-top: 120px;
+  }
+}

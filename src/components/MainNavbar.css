@@ -3,6 +3,15 @@
   height: 90px;
 }
 
+#mysearchbarstyle {
+  width: 270px;
+  height: 35px;
+}
+
+#second-logo {
+  display: none;
+}
+
 .mainnavbar-links a {
   text-decoration: none;
 }
@@ -47,7 +56,7 @@
   padding-left: 5px;
   font-size: 0.75rem;
   height: 30px;
-  width: 300px;
+  width: 270px;
   padding-top: 6px;
   margin: 1px 0;
 }
@@ -63,6 +72,35 @@
   padding-top: 6px;
   margin: 1px 0;
 }
+
+@media screen and (max-width: 826px) {
+
+  .logo {
+    width: 75px;
+    height: 75px;
+  }
+
+  .mainnavbar-links a {
+    font-size: 0.85rem;
+  }
+
+  .mainnavbar-links {
+    margin-right: 16px;
+  }
+
+  #second-logo {
+    display: block;
+  }
+
+  #second-logo .mainnavbar-links {
+    width: 35px;
+  }
+
+  .logo {
+    display: none;
+  }
+}
+
 
 
 

@@ -42,3 +42,9 @@ p > span {
   margin-bottom: 30px;
 }
 
+@media screen and (max-width: 765px) {
+  .RecipeDetailsPage {
+    margin-top: 130px;
+  }
+}
+

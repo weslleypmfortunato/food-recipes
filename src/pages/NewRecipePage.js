@@ -85,11 +85,12 @@ const NewRecipePage = () => {
         <AdSense1 />
       </div>
       <h2 style={{color: "black", marginTop: "32px", textAlign: "center"}}>Add a new recipe</h2>
-      <form onSubmit={ handleSubmit } className='form'>
+      <form onSubmit={ handleSubmit } className='form' style={{marginBottom: "50px"}}>
         <div className="input-group-sm flex-nowrap">
           <span className="input-group-text" id="addon-wrapping">Title: </span>
           <input 
             type="text" 
+            required
             className="form-control" 
             placeholder="Type the recipe's title" 
             aria-label="Title" 
@@ -103,6 +104,7 @@ const NewRecipePage = () => {
           <span className="input-group-text" id="addon-wrapping">Imagem URL: </span>
           <input 
             type="text" 
+            required
             className="form-control" 
             placeholder="Type the image's URL" 
             aria-label="ImageUrl" 
@@ -116,6 +118,7 @@ const NewRecipePage = () => {
           <span className="input-group-text" id="addon-wrapping">Prep. Time: </span>
           <input 
             type="text" 
+            required
             className="form-control" 
             placeholder="Type the preparation time (eg. 2 h 10 minutes)" 
             aria-label="PreparationTime" 
@@ -129,6 +132,7 @@ const NewRecipePage = () => {
           <span className="input-group-text" id="addon-wrapping">Servings: </span>
           <input 
             type="text" 
+            required
             className="form-control" 
             placeholder="Type the servings' quantity" 
             aria-label="Servings" 
@@ -142,6 +146,7 @@ const NewRecipePage = () => {
           <span className="input-group-text" id="addon-wrapping">Prepared by: </span>
           <input 
             type="text" 
+            required
             className="form-control" 
             placeholder="Type your name and surname" 
             aria-label="Owner" 
@@ -158,7 +163,7 @@ const NewRecipePage = () => {
             aria-label=".form-select-sm example"
             value={category}
             onChange={ e => setCategory(e.target.value) }>
-            <option>Choose one category</option>
+            <option value="All">Choose one category</option>
             <option value="cookies">Cookies</option>
             <option value="chicken">Chicken</option>
             <option value="beef">Beef</option>
@@ -179,6 +184,7 @@ const NewRecipePage = () => {
               <span className="input-group-text double-line-label" id="addon-wrapping">Ingredients: </span>
               <div>
                 <input
+                  required
                   type="text"
                   className="form-control ingredients-steps-nutrition-input"
                   style={{fontSize: "14px"}}
@@ -188,6 +194,7 @@ const NewRecipePage = () => {
                   value={quantity}
                   onChange={ e => setQuantity(e.target.value) }/>
                 <input
+                  required
                   type="text"
                   className="form-control ingredients-steps-nutrition-input"
                   style={{fontSize: "14px"}}
@@ -215,6 +222,7 @@ const NewRecipePage = () => {
               <span className="input-group-text double-line-label" id="addon-wrapping">Steps: </span>
               <div>
                 <input
+                  required
                   type="text"
                   className="form-control ingredients-steps-nutrition-input"
                   style={{fontSize: "14px"}}
@@ -224,6 +232,7 @@ const NewRecipePage = () => {
                   value={stepNum}
                   onChange={ e => setStepNum(e.target.value) }/>
                 <input
+                  required
                   type="text"
                   className="form-control ingredients-steps-nutrition-input"
                   style={{fontSize: "14px", maxWidth: "550px"}}
@@ -251,6 +260,7 @@ const NewRecipePage = () => {
               <span className="input-group-text double-line-label" id="addon-wrapping">Nutrition Facts: </span>
               <div>
                 <input
+                  required
                   type="text"
                   className="form-control ingredients-steps-nutrition-input"
                   style={{fontSize: "14px"}}
@@ -260,6 +270,7 @@ const NewRecipePage = () => {
                   value={nutritionQty}
                   onChange={ e => setNutritionQty(e.target.value) }/>
                 <input
+                  required
                   type="text"
                   className="form-control ingredients-steps-nutrition-input"
                   style={{fontSize: "14px"}}

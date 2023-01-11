@@ -121,6 +121,7 @@ const RecipeEditPage = () => {
         <div className="input-group-sm mb-3">
           <span className="input-group-text" id="basic-addon1" style={{width: "100px"}} >Title</span>
           <input 
+            required
             type="text"
             className='form-control'
             placeholder="Type the recipe's title"
@@ -133,6 +134,7 @@ const RecipeEditPage = () => {
         <div className="input-group-sm mb-3">
           <span className="input-group-text" id="basic-addon1" style={{width: "100px"}} >Image</span>
           <input 
+            required
             type="text"
             className='form-control'
             placeholder="Type image URL"
@@ -146,6 +148,7 @@ const RecipeEditPage = () => {
           <span className="input-group-text" id="basic-addon1" style={{width: "100px"}} >Prep time</span>
           <input 
             type="text"
+            required
             className='form-control'
             placeholder="Preparation time (eg. 2 h 10 minutes)"
             aria-label='PreparationTime'
@@ -157,6 +160,7 @@ const RecipeEditPage = () => {
         <div className="input-group-sm mb-3">
           <span className="input-group-text" id="basic-addon1" style={{width: "100px"}} >Servings</span>
           <input 
+            required
             type="text"
             className='form-control'
             placeholder="Add servings' quantity"
@@ -169,6 +173,7 @@ const RecipeEditPage = () => {
         <div className="input-group-sm mb-3">
           <span className="input-group-text" id="basic-addon1" style={{width: "100px"}} >Prepared by</span>
           <input 
+            required
             type="text"
             className='form-control'
             placeholder="Add creator's name"
@@ -189,7 +194,7 @@ const RecipeEditPage = () => {
             aria-label=".form-select-sm example"
             value={category}
             onChange={ e => setCategory(e.target.value) }>
-            <option>Choose one category</option>
+            <option value="All">Choose one category</option>
             <option value="cookies">Cookies</option>
             <option value="chicken">Chicken</option>
             <option value="beef">Beef</option>
@@ -215,6 +220,7 @@ const RecipeEditPage = () => {
                     id="basic-addon1" 
                     style={{width: "75px"}} >Quantity</span>
                   <input 
+                    required
                     type="text"
                     className='form-control'
                     style={{width: "72px", textAlign: "center", marginRight: "8px"}}
@@ -227,6 +233,7 @@ const RecipeEditPage = () => {
                     className="input-group-text ingredients-steps-nutrients" id="basic-addon1" 
                     style={{width: "100px"}} >Ingredient</span>
                   <input 
+                    required
                     type="text"
                     className='form-control'
                     style={{width: "445px"}}
@@ -251,6 +258,7 @@ const RecipeEditPage = () => {
                     className="input-group-text ingredients-steps-nutrients" id="basic-addon1" 
                     style={{width: "80px"}} >Step Num</span>
                   <input 
+                    required
                     type="text"
                     className='form-control'
                     style={{width: "72px", textAlign: "center"}}
@@ -264,6 +272,7 @@ const RecipeEditPage = () => {
                     id="basic-addon1" 
                     style={{width: "100px", marginLeft: "8px"}} >Description</span>
                   <input 
+                    required
                     type="text"
                     className='form-control'
                     style={{width: "440px"}}
@@ -288,6 +297,7 @@ const RecipeEditPage = () => {
                     className="input-group-text ingredients-steps-nutrients" id="basic-addon1" 
                     style={{width: "100px"}} >Nutrition Qty</span>
                   <input 
+                    required
                     type="text"
                     className='form-control'
                     style={{width: "72px", textAlign: "center"}}
@@ -301,6 +311,7 @@ const RecipeEditPage = () => {
                     id="basic-addon1" 
                     style={{width: "100px", marginLeft: "8px"}} >Nutrition Info</span>
                   <input 
+                    required
                     type="text"
                     className='form-control'
                     style={{width: "420px"}}
