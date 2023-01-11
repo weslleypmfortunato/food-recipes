@@ -54,7 +54,7 @@
   background-color: #ff030314;
   border-radius: 4px;
   padding-left: 5px;
-  font-size: 0.75rem;
+  font-size: 0.74rem;
   height: 30px;
   width: 270px;
   padding-top: 6px;
@@ -65,10 +65,9 @@
   background-color: #ff030335;
   border-radius: 4px;
   padding-left: 5px;
-  font-size: 0.77rem;
+  font-size: 0.74rem;
   font-weight: bold;
   height: 30px;
-  width: 300px;
   padding-top: 6px;
   margin: 1px 0;
 }
@@ -98,6 +97,14 @@
 
   .logo {
     display: none;
+  }
+
+  .search-result {
+    font-size: 0.7rem;
+  }
+
+  .search-result:hover {
+    font-size: 0.7rem;
   }
 }
 
