@@ -23,7 +23,7 @@ const AdSense1 = () => {
 
   return ( 
     <div>
-      <img src={ chosenAd } alt="Advertising" style={{maxWidth: "600px", margin: "30px 0"}} className="adSense"/>
+      <img src={ chosenAd } alt="Advertising" style={{maxWidth: "600px", margin: "30px 0"}} className="adSense" id='adsense'/>
     </div>
    );
 }

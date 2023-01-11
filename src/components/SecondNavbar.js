@@ -5,7 +5,9 @@ const SecondNavbar = () => {
   
   return ( 
     <nav className='SecondNav'>
-      <div>
+      <input type="checkbox" id="toggler" />
+      <label for="toggler"><i className="ri-menu-line"></i></label>
+      <div className='menu'>
         <ul className='second-nav-list'>
           <li className="nav-item">
             <Link to={"/recipes/category/cookies"} className="second-nav-link" aria-current="page" style={{backgroundColor: "white"}}>Cookies</Link>

@@ -32,7 +32,7 @@ const AllRecipesPage = () => {
           <tbody>
             <tr className='single-recipe'>
               { recipes.length === 0 ?
-                <div>
+                <div className='gif-center'>
                   <p>Working to bring you the most delicious recipes</p>
                   <img src={Loading4} alt="Loading GIF" className="gif" />
                 </div>

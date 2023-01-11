@@ -17,7 +17,7 @@ const AdSense2 = () => {
   
   return ( 
     <div>
-      <img src={ chosenSideAd } alt="Advertising" style={{maxWidth: "150px", maxHeight: "300px", margin: "0px 20px"}}/>
+      <img src={ chosenSideAd } alt="Advertising" style={{maxWidth: "150px", maxHeight: "300px", margin: "0px 20px"}} id="adsense2" />
     </div>
    );
 }
