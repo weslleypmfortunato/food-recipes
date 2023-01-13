@@ -71,6 +71,8 @@ const NewRecipePage = () => {
         setOwner('')
         setCategory('')
         setIngredients('')
+        setSteps('')
+        setNutrition('')
   
         navigate('/login')
       }).catch(err => console.log(err))
