@@ -184,7 +184,7 @@ const NewRecipePage = () => {
               <span className="input-group-text double-line-label" id="addon-wrapping">Ingredients: </span>
               <div>
                 <input
-                  required
+                  { ...ingredients.length === 0 && "required"  }
                   type="text"
                   className="form-control ingredients-steps-nutrition-input"
                   style={{fontSize: "14px"}}
@@ -194,7 +194,7 @@ const NewRecipePage = () => {
                   value={quantity}
                   onChange={ e => setQuantity(e.target.value) }/>
                 <input
-                  required
+                  { ...ingredients.length === 0 && "required"  }
                   type="text"
                   className="form-control ingredients-steps-nutrition-input"
                   style={{fontSize: "14px"}}
@@ -222,7 +222,7 @@ const NewRecipePage = () => {
               <span className="input-group-text double-line-label" id="addon-wrapping">Steps: </span>
               <div>
                 <input
-                  required
+                  { ...steps.length === 0 && "required"  }
                   type="text"
                   className="form-control ingredients-steps-nutrition-input"
                   style={{fontSize: "14px"}}
@@ -232,7 +232,7 @@ const NewRecipePage = () => {
                   value={stepNum}
                   onChange={ e => setStepNum(e.target.value) }/>
                 <input
-                  required
+                  { ...steps.length === 0 && "required"  }
                   type="text"
                   className="form-control ingredients-steps-nutrition-input"
                   style={{fontSize: "14px", maxWidth: "550px"}}
@@ -260,7 +260,7 @@ const NewRecipePage = () => {
               <span className="input-group-text double-line-label" id="addon-wrapping">Nutrition Facts: </span>
               <div>
                 <input
-                  required
+                { ...nutrition.length === 0 && "required"  }
                   type="text"
                   className="form-control ingredients-steps-nutrition-input"
                   style={{fontSize: "14px"}}
@@ -270,7 +270,7 @@ const NewRecipePage = () => {
                   value={nutritionQty}
                   onChange={ e => setNutritionQty(e.target.value) }/>
                 <input
-                  required
+                  { ...nutrition.length === 0 && "required"  }
                   type="text"
                   className="form-control ingredients-steps-nutrition-input"
                   style={{fontSize: "14px"}}

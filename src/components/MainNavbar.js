@@ -56,7 +56,7 @@ const MainNavbar = ({setFilteredRecipe}) => {
               />
                   
               <div className="search-list">
-                { search !== "" &&
+                { (search !== "" && search.length >= 2) &&
                     recipes.filter(recipe => {
                       return (recipe.name.toLowerCase().includes(search.toLowerCase()))
                     }).map((post, index) => (
