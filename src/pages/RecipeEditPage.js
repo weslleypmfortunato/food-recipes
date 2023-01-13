@@ -21,6 +21,62 @@ const RecipeEditPage = () => {
   const [nutrition, setNutrition] = useState('')
   const [loading, setLoading] = useState(true)
 
+  // Aqui
+  const [quantity, setQuantity] = useState('')
+  const [ingredient, setIngredient] = useState('')
+  const [toDo, setToDo] = useState('')
+  const [stepNum, setStepNum] = useState('') 
+  const [nutritionQty, setNutritionQty] = useState('')
+  const [nutritionUnit, setNutritionUnit] = useState('') 
+
+  const addIngredients = () => {
+    const newIngredient = {
+      ingredient,
+      quantity
+    }
+    setIngredients([...ingredients, newIngredient])
+    setQuantity('')
+    setIngredient('')
+  }
+
+  const addSteps = () => {
+    const newStep = {
+      stepNum,
+      toDo
+    }
+    setSteps([...steps, newStep])
+    setStepNum("")
+    setToDo('')
+  }
+
+  const addNutrition = () => {
+    const newNutrition = {
+      nutritionQty,
+      nutritionUnit
+    }
+    setNutrition([...nutrition, newNutrition])
+    setNutritionQty('')
+    setNutritionUnit('')
+  }
+
+  const handleSubmitII = ev => {
+    ev.preventDefault()
+    const newRecipe = {name, imageUrl, prepationTime, servings, owner, category, ingredients, steps, nutrition}
+
+    axios.post(apiURL, newRecipe)
+      .then(response => {
+        setIngredients('')
+        setSteps('')
+        setNutrition('')
+  
+        navigate('/login')
+      }).catch(err => console.log(err))
+  }
+
+  // Ate aqui
+
+
+
   const { recipeId } = useParams()
   const navigate = useNavigate()
 
@@ -220,7 +276,7 @@ const RecipeEditPage = () => {
                     id="basic-addon1" 
                     style={{width: "75px"}} >Quantity</span>
                   <input 
-                    required
+                    { ...ingredients.length === 0 && ingredient  }
                     type="text"
                     className='form-control'
                     style={{width: "72px", textAlign: "center", marginRight: "8px"}}
@@ -233,7 +289,7 @@ const RecipeEditPage = () => {
                     className="input-group-text ingredients-steps-nutrients" id="basic-addon1" 
                     style={{width: "100px"}} >Ingredient</span>
                   <input 
-                    required
+                    { ...ingredients.length === 0 && ingredient  }
                     type="text"
                     className='form-control'
                     style={{width: "445px"}}
@@ -246,6 +302,7 @@ const RecipeEditPage = () => {
               )
             })
           }
+          <button onClick={ addIngredients } type="button" className="btn btn-outline-primary btn-sm edit-new-recipe-btn">+</button>
         </div>
 
         <h5 className='sub-title'>--- STEPS ---</h5>
@@ -258,7 +315,7 @@ const RecipeEditPage = () => {
                     className="input-group-text ingredients-steps-nutrients" id="basic-addon1" 
                     style={{width: "80px"}} >Step Num</span>
                   <input 
-                    required
+                    { ...steps.length === 0 && ingredient  }
                     type="text"
                     className='form-control'
                     style={{width: "72px", textAlign: "center"}}
@@ -272,7 +329,7 @@ const RecipeEditPage = () => {
                     id="basic-addon1" 
                     style={{width: "100px", marginLeft: "8px"}} >Description</span>
                   <input 
-                    required
+                    { ...steps.length === 0 && ingredient  }
                     type="text"
                     className='form-control'
                     style={{width: "440px"}}
@@ -285,6 +342,7 @@ const RecipeEditPage = () => {
               )
             })
           }
+          <button onClick={ addSteps } type="button" className="btn btn-outline-primary btn-sm edit-new-recipe-btn">+</button>
         </div>
 
         <h5 className='sub-title'>--- NUTRITION FACTS ---</h5>
@@ -297,7 +355,7 @@ const RecipeEditPage = () => {
                     className="input-group-text ingredients-steps-nutrients" id="basic-addon1" 
                     style={{width: "100px"}} >Nutrition Qty</span>
                   <input 
-                    required
+                    { ...nutrition.length === 0 && ingredient  }
                     type="text"
                     className='form-control'
                     style={{width: "72px", textAlign: "center"}}
@@ -311,7 +369,7 @@ const RecipeEditPage = () => {
                     id="basic-addon1" 
                     style={{width: "100px", marginLeft: "8px"}} >Nutrition Info</span>
                   <input 
-                    required
+                    { ...nutrition.length === 0 && ingredient  }
                     type="text"
                     className='form-control'
                     style={{width: "420px"}}
@@ -324,10 +382,12 @@ const RecipeEditPage = () => {
               )
             })
           }
+          <button onClick={ addNutrition } type="button" className="btn btn-outline-primary btn-sm edit-new-recipe-btn">+</button>
         </div>
       <button 
         type="submit" 
         className="btn btn-outline-primary save"
+        id='save-btn'
         style={{fontWeight: "700"}}
         >SAVE
       </button>
