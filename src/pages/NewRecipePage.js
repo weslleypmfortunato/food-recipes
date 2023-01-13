@@ -185,6 +185,7 @@ const NewRecipePage = () => {
               <div>
                 <input
                   { ...ingredients.length === 0 && "required"  }
+                
                   type="text"
                   className="form-control ingredients-steps-nutrition-input"
                   style={{fontSize: "14px"}}
@@ -194,7 +195,7 @@ const NewRecipePage = () => {
                   value={quantity}
                   onChange={ e => setQuantity(e.target.value) }/>
                 <input
-                  { ...ingredients.length === 0 && "required"  }
+                  { ...ingredients.length === 0 && ingredient  }
                   type="text"
                   className="form-control ingredients-steps-nutrition-input"
                   style={{fontSize: "14px"}}
