@@ -21,7 +21,6 @@ const RecipeEditPage = () => {
   const [nutrition, setNutrition] = useState('')
   const [loading, setLoading] = useState(true)
 
-  // Aqui
   const [quantity, setQuantity] = useState('')
   const [ingredient, setIngredient] = useState('')
   const [toDo, setToDo] = useState('')
@@ -72,10 +71,6 @@ const RecipeEditPage = () => {
         navigate('/login')
       }).catch(err => console.log(err))
   }
-
-  // Ate aqui
-
-
 
   const { recipeId } = useParams()
   const navigate = useNavigate()

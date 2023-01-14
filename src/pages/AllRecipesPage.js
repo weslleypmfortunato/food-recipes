@@ -21,7 +21,6 @@ const AllRecipesPage = () => {
       }).catch(err => console.log(err))
   }, [])
 
-
   return ( 
     <div className="AllRecipesPage">
       <MainNavbar />
