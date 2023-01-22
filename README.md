@@ -1,4 +1,6 @@
-<h1>GETTING STARTED WITH CREATE REACT APP</h1>
+import './README.css'
+
+<h1>Getting Started With <a href="https://github.com/facebook/create-react-app">Create React App</a></h1>
 
 <p>The project has been created to validate the learned knowledge during the front-end modules. </p>
 
@@ -9,16 +11,15 @@
 <h3>npm start</h3>
 
 <p>Runs the app in the development mode.</p>
-<p>Open http://localhost:3000 to view it in your browser.</p>
-
+<p>Open <a href="http://localhost:3000/">http://localhost:3000 </a>to view it in your browser.</p>
 <p>The page will reload when you make changes.</p>
 
 <h2>Learn More</h2>
 
-<p>You can learn more in the Create React App documentation.</p>
+<p>You can learn more in the <a href="https://create-react-app.dev/docs/getting-started/">Create React App documentation</a>.</p>
 
-<p>To learn React, check out the React documentation.</p>
+<p>To learn React, check out the <a href="https://reactjs.org/">React documentation</a>.</p>
 
 <h2>About Developers</h2>
 
-<p>Click here to see a brief history about the developers. For further information, navigate to social media icons and visit our pages.</p>
+<p><a href="http://localhost:3000/about">Click here</a> to see a brief history about the developers. For further information, navigate to social media icons and visit our pages.</p>
