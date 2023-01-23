@@ -42,6 +42,15 @@
 <p>You can learn more in the <a href="https://create-react-app.dev/docs/getting-started/" target="_blank">Create React App documentation</a>.</p>
 <p>To learn React, check out the <a href="https://reactjs.org/" >React documentation</a>.</p>
 
+<h2>🚀 Execute it</h2>
+
+<p>The project has been deployed on the Netlify network and can be accessed through the link below: </p>
+
+<a href="https://venerable-cuchufli-697791.netlify.app/">
+  <p>Flavours of the World</p>
+</a>
+
+
 <h2>🧑🏼‍🦰 About Developers 👨🏽</h2>
 
 <p><a href="https://venerable-cuchufli-697791.netlify.app/about" >Click here</a> to see a brief history about the developers. For further information, navigate to social media icons and visit our pages.</p>
