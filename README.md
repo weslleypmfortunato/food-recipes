@@ -2,8 +2,17 @@
 
 <h2>💻 Overview</h2>
 
-<p>As a developer working on the Flavours of the World website project, our main focus has been on ensuring that the website is user-friendly and easy to navigate. We have implemented various features such as search functionality, recipe categorization, and user-submission/edition to make it easy for users to find the recipes they're looking for. Additionally, we have also worked on the website's responsive design to ensure that it looks and functions well on various devices. We have used technologies such as React.js, Bootstrap, and AxioPI from Ironhack. Overall, it has been a great experience working on this project and I am excited to see your opinion about this project.</p>
+<p>As a developer working on the Flavours of the World website project, our main focus has been on ensuring that the website is user-friendly and easy to navigate. We have implemented various features such as search functionality, recipe categorization, and user-submission/edition to make it easy for users to find the recipes they're looking for. Additionally, we have also worked on the website's responsive design to ensure that it looks and functions well on various devices. Overall, it has been a great experience working on this project and I am excited to see your opinion about this project.</p>
 <p>The project has been created to validate the learned knowledge during the front-end modules. </p>
+
+<h2>🛰 Used Technologies</h2>
+<ul>
+  <li>ReactJS</li>
+  <li>Bootstrap</li>
+  <li>Ironhack Axios API</li>
+  <li>HTML</li>
+  <li>CSS</li>
+</ul>
 
 <h2>🎯 Page's Layouts</h2>
 
