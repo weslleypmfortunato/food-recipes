@@ -2,11 +2,8 @@
 
 <h2>💻 Overview</h2>
 
-<p>As a developer working on the Flavours of the World website project, our main focus has been on ensuring that the website is user-friendly and easy to navigate. We have implemented various features such as search functionality, recipe categorization, and user-submission/edition to make it easy for users to find the recipes they're looking for. Additionally, we have also worked on the website's responsive design to ensure that it looks and functions well on various devices. We have used technologies such as React.js, Bootstrap, and AxioPI from Ironhack. Overall, it has been a great experience working on this project and I am excited to see you opinion about this project.</p>
-
+<p>As a developer working on the Flavours of the World website project, our main focus has been on ensuring that the website is user-friendly and easy to navigate. We have implemented various features such as search functionality, recipe categorization, and user-submission/edition to make it easy for users to find the recipes they're looking for. Additionally, we have also worked on the website's responsive design to ensure that it looks and functions well on various devices. We have used technologies such as React.js, Bootstrap, and AxioPI from Ironhack. Overall, it has been a great experience working on this project and I am excited to see your opinion about this project.</p>
 <p>The project has been created to validate the learned knowledge during the front-end modules. </p>
-
-<p>Getting Started With <a href="https://github.com/facebook/create-react-app">Create React App</a></p>
 
 <h2>🎯 Page's Layouts</h2>
 
@@ -34,17 +31,15 @@
 
 <h2>📝 Available Scripts</h2>
 
+<p>Getting Started With <a href="https://github.com/facebook/create-react-app">Create React App</a></p>
 <p>In the project directory, you can run:</p>
-
 <h3>npm start</h3>
-
 <p>You can run the app in the development mode or if preferred, open <a href="http://localhost:3000/">http://localhost:3000 </a>to view it in your browser.</p>
 <p>The page will reload when you make changes.</p>
 
 <h2>💡 Learn More</h2>
 
 <p>You can learn more in the <a href="https://create-react-app.dev/docs/getting-started/" target="_blank">Create React App documentation</a>.</p>
-
 <p>To learn React, check out the <a href="https://reactjs.org/" >React documentation</a>.</p>
 
 <h2>🧑🏼‍🦰 About Developers 👨🏽</h2>
